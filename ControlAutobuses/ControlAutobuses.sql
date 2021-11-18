@@ -1,0 +1,36 @@
+CREATE DATABASE ControlAutobuses;
+
+USE ControlAutobuses;
+
+CREATE TABLE Autobuses(
+	Id NVARCHAR(255) PRIMARY KEY,
+	Codigo AS('COD-'+RIGHT(Id,4)),
+	Marca NVARCHAR(30),
+	Modelo NVARCHAR(30),
+	Placa NVARCHAR(10) UNIQUE NOT NULL,
+	Color NVARCHAR(25),
+	Año SMALLINT,
+	Asignado BIT
+);
+
+CREATE TABLE Rutas(
+	Id NVARCHAR(255) PRIMARY KEY,
+	Codigo AS('COD-'+RIGHT(Id,4)),
+	Nombre NVARCHAR(30) NOT NULL,
+	Descripcion NVARCHAR(50),
+	Asingnado BIT,
+);
+
+CREATE TABLE Choferes(
+	Id NVARCHAR(255) PRIMARY KEY,
+	Codigo AS('COD-'+RIGHT(Id,4)),
+	Nombre NVARCHAR(50) NOT NULL,
+	Apellido NVARCHAR(50),
+	BirthDate DATETIME,
+	Cedula NVARCHAR(10) UNIQUE NOT NULL,
+	AutobusId NVARCHAR(255) UNIQUE,
+	RutaId NVARCHAR(255) UNIQUE,
+	--CONSTRAINTS
+	CONSTRAINT FK_Chofer_Autobus FOREIGN KEY (AutobusId) REFERENCES Autobuses (Id),
+	CONSTRAINT FK_Chofer_Ruta FOREIGN KEY (RutaId) REFERENCES Rutas (Id)
+);
