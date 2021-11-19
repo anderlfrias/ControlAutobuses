@@ -15,6 +15,9 @@ namespace CapaEntidades
         public DateTime BirthDay { get; set; }
         public string Cedula { get; set; }
 
+        public string AutobusId { get; set; }
+        public string RutaId { get; set; }
+
         public Autobus Autobus { get; set; }
         public Ruta Ruta { get; set; }
     }

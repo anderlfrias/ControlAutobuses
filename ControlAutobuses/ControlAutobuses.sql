@@ -9,7 +9,7 @@ CREATE TABLE Autobuses(
 	Modelo NVARCHAR(30),
 	Placa NVARCHAR(10) UNIQUE NOT NULL,
 	Color NVARCHAR(25),
-	Año SMALLINT,
+	Anio SMALLINT,
 	Asignado BIT
 );
 
@@ -43,11 +43,11 @@ CREATE PROCEDURE SP_CREATE_AUTOBUS
 	@Modelo NVARCHAR(30),
 	@Placa NVARCHAR(10),
 	@Color NVARCHAR(25),
-	@Año SMALLINT,
+	@Anio SMALLINT,
 	@Asignado BIT
 AS
-	INSERT INTO Autobuses (Id, Marca, Modelo, Placa, Color, Año, Asignado)
-	VALUES (@Id, @Marca, @Modelo, @Placa, @Color, @Año, @Asignado);
+	INSERT INTO Autobuses (Id, Marca, Modelo, Placa, Color, Anio, Asignado)
+	VALUES (@Id, @Marca, @Modelo, @Placa, @Color, @Anio, @Asignado);
 
 GO
 CREATE PROCEDURE SP_FILTRAR_AUTOBUS
@@ -75,14 +75,14 @@ CREATE PROCEDURE SP_MODIFICAR_AUTOBUS
 	@Modelo NVARCHAR(30),
 	@Placa NVARCHAR(10),
 	@Color NVARCHAR(25),
-	@Año SMALLINT,
+	@Anio SMALLINT,
 	@Asignado BIT
 AS
 	UPDATE Autobuses
 	SET Marca = @Marca,
 		Modelo = @Modelo,
 		Color = @Color,
-		Año = @Año,
+		Anio = @Anio,
 		Asignado = @Asignado
 	WHERE Id = @Id;
 

@@ -21,7 +21,7 @@ namespace CapaEntidades
         public string Modelo { get; set; }
         public string Placa { get; set; }
         public string Color { get; set; }
-        public int Año { get; set; }
+        public int Anio { get; set; }
         public bool Asignado { get; set; }
 
         public Chofer Chofer { get; set; }
