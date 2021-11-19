@@ -9,7 +9,8 @@ using System.Text;
 
 namespace CapaDatos
 {
-    public class DbAutobus
+    public class DbAutobus : Conexion
     {
+        
     }
 }

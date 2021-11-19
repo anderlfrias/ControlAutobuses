@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    class Conexion
+    public class Conexion
     {
-        SqlConnection _conexion = new SqlConnection("Data Source=LAPTOP-VMT01VSC;Initial Catalog=ControlAutobuses;Integrated Security=True");
+        private readonly SqlConnection connection = new SqlConnection("Data Source=LAPTOP-VMT01VSC;Initial Catalog=ControlAutobuses;Integrated Security=True");
 
-        protected SqlConnection Connection { get => _conexion;}
+        protected SqlConnection GetConnection()
+        {
+            return connection;
+        }
     }
 }
