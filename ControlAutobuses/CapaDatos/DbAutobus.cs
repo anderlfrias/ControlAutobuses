@@ -9,7 +9,7 @@ using System.Text;
 
 namespace CapaDatos
 {
-    public class Class1
+    public class DbAutobus
     {
     }
 }
