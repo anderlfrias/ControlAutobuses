@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="DataAutobus.cs" />
+    <Compile Include="DataChofer.cs" />
+    <Compile Include="DataRuta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
