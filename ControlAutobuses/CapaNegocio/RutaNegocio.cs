@@ -42,13 +42,13 @@ namespace CapaNegocio
             return message;
         }
 
-        public IList<Ruta> Find(string filtro = "")
+        public IList<Ruta> Get(string filtro = "")
         {
             var result = _dataRuta.Find(filtro);
             return result;
         }
 
-        public Ruta FindById(string id)
+        public Ruta GetById(string id)
         {
             var result = _dataRuta.FindById(id);
             return result;

@@ -10,7 +10,7 @@ namespace CapaEntidades
     {
         public Ruta()
         {
-            Chofer = new Chofer();
+            //Chofer = new Chofer();
         }
         public string Id { get; set; }
         public string Codigo { get; set; }
@@ -18,6 +18,6 @@ namespace CapaEntidades
         public string Descripcion { get; set; }
         public bool Asignado { get; set; }
 
-        public Chofer Chofer { get; set; }
+        //public Chofer Chofer { get; set; }
     }
 }

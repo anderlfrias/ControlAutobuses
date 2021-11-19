@@ -13,7 +13,7 @@ namespace CapaEntidades
     {
         public Autobus()
         {
-            Chofer = new Chofer();
+            //Chofer = new Chofer();
         }
         public string Id { get; set; }
         public string Codigo { get; set; }
@@ -24,6 +24,6 @@ namespace CapaEntidades
         public int Anio { get; set; }
         public bool Asignado { get; set; }
 
-        public Chofer Chofer { get; set; }
+        //public Chofer Chofer { get; set; }
     }
 }

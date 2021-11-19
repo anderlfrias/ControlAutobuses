@@ -34,19 +34,27 @@ namespace CapaDatos
             this.SqlDataReader = this.SqlQuery("SP_FILTRAR_CHOFERES", parameters);
 
             IList<Chofer> choferes = new List<Chofer>();
+            Chofer chofer;
             while (this.SqlDataReader.Read())
             {
-                choferes.Add(new Chofer
+                chofer = new Chofer();
+                chofer.Id = this.SqlDataReader.GetString(0);
+                chofer.Codigo = this.SqlDataReader.GetString(1);
+                chofer.Nombre = this.SqlDataReader.GetString(2);
+                chofer.Apellido = this.SqlDataReader.GetString(3);
+                chofer.BirthDay = this.SqlDataReader.GetDateTime(4);
+                chofer.Cedula = this.SqlDataReader.GetString(5);
+                try
                 {
-                    Id = this.SqlDataReader.GetString(0),
-                    Codigo = this.SqlDataReader.GetString(1),
-                    Nombre = this.SqlDataReader.GetString(2),
-                    Apellido = this.SqlDataReader.GetString(3),
-                    BirthDay = this.SqlDataReader.GetDateTime(4),
-                    Cedula = this.SqlDataReader.GetString(5),
-                    AutobusId = this.SqlDataReader.GetString(6),
-                    RutaId = this.SqlDataReader.GetString(7)
-                });
+                    chofer.AutobusId = this.SqlDataReader.GetString(6);
+                    chofer.RutaId = this.SqlDataReader.GetString(7);
+                }
+                catch (Exception)
+                {
+                    chofer.AutobusId = null;
+                    chofer.RutaId = null;
+                }
+                choferes.Add(chofer);
             }
 
             this.sqlConnection.Close();

@@ -46,13 +46,13 @@ namespace CapaNegocio
             return message;
         }
 
-        public IList<Autobus> Find(string filtro = "")
+        public IList<Autobus> Get(string filtro = "")
         {
             var result = _dataAutobus.Find(filtro);
             return result;
         }
 
-        public Autobus FindById(string id)
+        public Autobus GetById(string id)
         {
             var result = _dataAutobus.FindById(id);
             return result;

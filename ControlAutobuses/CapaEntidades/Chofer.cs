@@ -18,7 +18,7 @@ namespace CapaEntidades
         public string AutobusId { get; set; }
         public string RutaId { get; set; }
 
-        public Autobus Autobus { get; set; }
-        public Ruta Ruta { get; set; }
+        //public Autobus Autobus { get; set; }
+        //public Ruta Ruta { get; set; }
     }
 }

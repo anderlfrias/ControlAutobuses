@@ -13,6 +13,11 @@ namespace CapaNegocio
         string message;
         readonly DataChofer _dataChofer;
 
+        public ChoferNegocio()
+        {
+            _dataChofer = new DataChofer();
+        }
+
         public string Create(Chofer model)
         {
             if (string.IsNullOrEmpty(model.Cedula))
@@ -38,13 +43,13 @@ namespace CapaNegocio
             return message;
         }
 
-        public IList<Chofer> Find(string filtro = "")
+        public IList<Chofer> Get(string filtro = "")
         {
             var result = _dataChofer.Find(filtro);
             return result;
         }
 
-        public Chofer FindById(string id)
+        public Chofer GetById(string id)
         {
             var result = _dataChofer.FindById(id);
             return result;
