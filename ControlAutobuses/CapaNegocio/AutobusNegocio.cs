@@ -31,7 +31,7 @@ namespace CapaNegocio
             {
                 try
                 {
-                    model.Id = Guid.NewGuid().ToString();
+                    model.Id = Guid.NewGuid().ToString().ToUpper();
                     _dataAutobus.Add(model);
                     message = "Operacion exitosa.";
                 }

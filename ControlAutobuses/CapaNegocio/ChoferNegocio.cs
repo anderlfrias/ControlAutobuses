@@ -28,7 +28,7 @@ namespace CapaNegocio
             {
                 try
                 {
-                    model.Id = Guid.NewGuid().ToString();
+                    model.Id = Guid.NewGuid().ToString().ToUpper();
                     _dataChofer.Add(model);
                     message = "Operacion exitosa.";
                 }

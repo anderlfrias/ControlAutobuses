@@ -91,11 +91,10 @@ namespace CapaDatos
             parameters.Add(new SqlParameter("@Placa", model.Color));
             parameters.Add(new SqlParameter("@Color", model.Color));
             parameters.Add(new SqlParameter("@Anio", model.Anio));
-            parameters.Add(new SqlParameter("@Asingnado", model.Asignado));
+            parameters.Add(new SqlParameter("@Asignado", model.Asignado));
 
             this.SqlDataReader = this.SqlQuery("SP_MODIFICAR_AUTOBUS", parameters);
             this.sqlConnection.Close();
-
         }
 
         public void Remove(string id)

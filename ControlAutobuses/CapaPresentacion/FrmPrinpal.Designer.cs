@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrinpal));
             this.pnlControlador = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRutas = new System.Windows.Forms.Button();
@@ -41,20 +41,21 @@
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlControlador.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlControlador
             // 
-            this.pnlControlador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlControlador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(136)))));
             this.pnlControlador.Controls.Add(this.label1);
-            this.pnlControlador.Controls.Add(this.btnCerrar);
+            this.pnlControlador.Controls.Add(this.btnClose);
             this.pnlControlador.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControlador.Location = new System.Drawing.Point(0, 0);
             this.pnlControlador.Name = "pnlControlador";
-            this.pnlControlador.Size = new System.Drawing.Size(785, 32);
+            this.pnlControlador.Size = new System.Drawing.Size(746, 32);
             this.pnlControlador.TabIndex = 0;
+            this.pnlControlador.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlControlador_MouseDown);
             // 
             // label1
             // 
@@ -67,21 +68,22 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "SISTEMA DE CONTROL DE AUTOBUSES";
             // 
-            // btnCerrar
+            // btnClose
             // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(756, 4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(26, 23);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnCerrar.TabIndex = 2;
-            this.btnCerrar.TabStop = false;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(717, 4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(26, 23);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 2;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(136)))));
             this.pnlMenu.Controls.Add(this.btnSalir);
             this.pnlMenu.Controls.Add(this.btnRutas);
             this.pnlMenu.Controls.Add(this.btnAutobuses);
@@ -92,7 +94,7 @@
             this.pnlMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMenu.Location = new System.Drawing.Point(0, 32);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(144, 448);
+            this.pnlMenu.Size = new System.Drawing.Size(144, 517);
             this.pnlMenu.TabIndex = 1;
             // 
             // btnSalir
@@ -195,7 +197,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(144, 32);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(641, 448);
+            this.pnlContenedor.Size = new System.Drawing.Size(602, 517);
             this.pnlContenedor.TabIndex = 2;
             // 
             // FrmPrinpal
@@ -203,15 +205,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(785, 480);
+            this.ClientSize = new System.Drawing.Size(746, 549);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlControlador);
+            this.MinimumSize = new System.Drawing.Size(762, 588);
             this.Name = "FrmPrinpal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pnlControlador.ResumeLayout(false);
             this.pnlControlador.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -222,7 +226,7 @@
         private System.Windows.Forms.Panel pnlControlador;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Button btnRutas;
         private System.Windows.Forms.Button btnAutobuses;
