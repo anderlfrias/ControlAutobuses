@@ -58,6 +58,12 @@
     <Compile Include="FrmPrinpal.Designer.cs">
       <DependentUpon>FrmPrinpal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRuta.Designer.cs">
+      <DependentUpon>FrmRuta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAutobus.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrinpal.resx">
       <DependentUpon>FrmPrinpal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRuta.resx">
+      <DependentUpon>FrmRuta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

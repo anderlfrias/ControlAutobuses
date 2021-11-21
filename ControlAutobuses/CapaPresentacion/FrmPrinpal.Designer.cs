@@ -130,6 +130,7 @@
             this.btnRutas.Text = "Rutas";
             this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRutas.UseVisualStyleBackColor = true;
+            this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
             // 
             // btnAutobuses
             // 

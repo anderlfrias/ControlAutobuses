@@ -73,10 +73,9 @@ namespace CapaDatos
         {
             IList<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("@Id", model.Id));
-            parameters.Add(new SqlParameter("@Codigo", model.Codigo));
             parameters.Add(new SqlParameter("@Nombre", model.Nombre));
             parameters.Add(new SqlParameter("@Descripcion", model.Descripcion));
-            parameters.Add(new SqlParameter("@Asingnado", model.Asignado));
+            parameters.Add(new SqlParameter("@Asignado", model.Asignado));
 
             this.SqlDataReader = this.SqlQuery("SP_MODIFICAR_RUTA", parameters);
             this.sqlConnection.Close();

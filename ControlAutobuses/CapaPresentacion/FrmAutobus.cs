@@ -31,12 +31,12 @@ namespace CapaPresentacion
             txtCodigo.ReadOnly = true;
             txtCodigo.BackColor = Color.White;
             MostrarAutobuses();
+            VisibilidadTabla();
         }
 
         private void MostrarAutobuses(string filtro = "")
         {
             dgvAutobuses.DataSource = _autobusNegocio.Get(filtro);
-            VisibilidadTabla();
         }
 
         private void VisibilidadTabla()
@@ -85,6 +85,7 @@ namespace CapaPresentacion
             Limpiar();
             MostrarAutobuses();
         }
+        
         private void EliminarAutobus()
         {
             string Id = dgvAutobuses.CurrentRow.Cells[0].Value.ToString();
