@@ -40,9 +40,16 @@
             this.btnInicio = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlControlador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
+            this.pnlContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlControlador
@@ -94,7 +101,7 @@
             this.pnlMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMenu.Location = new System.Drawing.Point(0, 32);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(144, 517);
+            this.pnlMenu.Size = new System.Drawing.Size(140, 517);
             this.pnlMenu.TabIndex = 1;
             // 
             // btnSalir
@@ -106,9 +113,9 @@
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(0, 246);
+            this.btnSalir.Location = new System.Drawing.Point(0, 266);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(144, 38);
+            this.btnSalir.Size = new System.Drawing.Size(140, 38);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,12 +129,13 @@
             this.btnRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRutas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRutas.ForeColor = System.Drawing.Color.White;
+            this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
             this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutas.Location = new System.Drawing.Point(0, 208);
+            this.btnRutas.Location = new System.Drawing.Point(0, 228);
             this.btnRutas.Name = "btnRutas";
-            this.btnRutas.Size = new System.Drawing.Size(144, 38);
+            this.btnRutas.Size = new System.Drawing.Size(140, 38);
             this.btnRutas.TabIndex = 5;
-            this.btnRutas.Text = "Rutas";
+            this.btnRutas.Text = "        Rutas";
             this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRutas.UseVisualStyleBackColor = true;
             this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
@@ -140,12 +148,13 @@
             this.btnAutobuses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAutobuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAutobuses.ForeColor = System.Drawing.Color.White;
+            this.btnAutobuses.Image = ((System.Drawing.Image)(resources.GetObject("btnAutobuses.Image")));
             this.btnAutobuses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAutobuses.Location = new System.Drawing.Point(0, 170);
+            this.btnAutobuses.Location = new System.Drawing.Point(0, 190);
             this.btnAutobuses.Name = "btnAutobuses";
-            this.btnAutobuses.Size = new System.Drawing.Size(144, 38);
+            this.btnAutobuses.Size = new System.Drawing.Size(140, 38);
             this.btnAutobuses.TabIndex = 4;
-            this.btnAutobuses.Text = "Autobuses";
+            this.btnAutobuses.Text = "        Autobuses";
             this.btnAutobuses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAutobuses.UseVisualStyleBackColor = true;
             this.btnAutobuses.Click += new System.EventHandler(this.btnAutobuses_Click);
@@ -158,12 +167,13 @@
             this.btnChoferes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChoferes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChoferes.ForeColor = System.Drawing.Color.White;
+            this.btnChoferes.Image = ((System.Drawing.Image)(resources.GetObject("btnChoferes.Image")));
             this.btnChoferes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoferes.Location = new System.Drawing.Point(0, 132);
+            this.btnChoferes.Location = new System.Drawing.Point(0, 152);
             this.btnChoferes.Name = "btnChoferes";
-            this.btnChoferes.Size = new System.Drawing.Size(144, 38);
+            this.btnChoferes.Size = new System.Drawing.Size(140, 38);
             this.btnChoferes.TabIndex = 3;
-            this.btnChoferes.Text = "Choferes";
+            this.btnChoferes.Text = "        Choferes";
             this.btnChoferes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChoferes.UseVisualStyleBackColor = true;
             this.btnChoferes.Click += new System.EventHandler(this.btnChoferes_Click);
@@ -176,31 +186,68 @@
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(0, 94);
+            this.btnInicio.Location = new System.Drawing.Point(0, 114);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(144, 38);
+            this.btnInicio.Size = new System.Drawing.Size(140, 38);
             this.btnInicio.TabIndex = 2;
-            this.btnInicio.Text = "Inicio";
+            this.btnInicio.Text = "        Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // pnlLogo
             // 
+            this.pnlLogo.Controls.Add(this.pictureBox2);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(144, 94);
+            this.pnlLogo.Size = new System.Drawing.Size(140, 114);
             this.pnlLogo.TabIndex = 0;
             // 
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.White;
+            this.pnlContenedor.Controls.Add(this.lblTitulo);
+            this.pnlContenedor.Controls.Add(this.pictureBox1);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(144, 32);
+            this.pnlContenedor.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlContenedor.Location = new System.Drawing.Point(140, 32);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(602, 517);
+            this.pnlContenedor.Size = new System.Drawing.Size(606, 517);
             this.pnlContenedor.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(201, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(238, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(27, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(87, 80);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(136)))));
+            this.lblTitulo.Location = new System.Drawing.Point(123, 327);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(422, 40);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Sistema de Control de Autobuses";
             // 
             // FrmPrinpal
             // 
@@ -219,6 +266,11 @@
             this.pnlControlador.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            this.pnlLogo.ResumeLayout(false);
+            this.pnlContenedor.ResumeLayout(false);
+            this.pnlContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,6 +288,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
 

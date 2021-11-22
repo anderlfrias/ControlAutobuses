@@ -2,6 +2,23 @@ CREATE DATABASE ControlAutobuses;
 
 USE ControlAutobuses;
 
+CREATE TABLE Roles(
+	Id NVARCHAR(255) PRIMARY KEY,
+	Codigo AS('COD-'+RIGHT(Id,4)),
+	Nombre NVARCHAR(20),
+	NombreNormal NVARCHAR(30)
+);
+
+CREATE TABLE Usuarios(
+	Id NVARCHAR(255) PRIMARY KEY,
+	Codigo AS('COD-'+RIGHT(Id,4)),
+	Nombre NVARCHAR(50),
+	Usuario NVARCHAR(12) UNIQUE NOT NULL,
+	Password NVARCHAR(8) NOT NULL,
+	RoleId NVARCHAR(255) NOT NULL
+	CONSTRAINT FK_Usuario_Role FOREIGN KEY (RoleId) REFERENCES Roles (Id)
+);
+
 CREATE TABLE Autobuses(
 	Id NVARCHAR(255) PRIMARY KEY,
 	Codigo AS('COD-'+RIGHT(Id,4)),
@@ -93,8 +110,9 @@ AS
 	DELETE FROM Autobuses
 	WHERE Id = @Id;
 
---STORE PROCEDURE PARA RUTAS
 GO
+
+--STORE PROCEDURE PARA RUTAS
 CREATE PROCEDURE SP_CREATE_RUTA
 	@Id NVARCHAR(255),
 	@Nombre NVARCHAR(30),
@@ -140,8 +158,9 @@ AS
 	DELETE FROM Rutas
 	WHERE Id = @Id;
 
---STORE PROCEDURE PARA CHOFERES
 GO
+
+--STORE PROCEDURE PARA CHOFERES
 CREATE PROCEDURE SP_CREATE_CHOFER
 	@Id NVARCHAR(255),
 	@Nombre NVARCHAR(50),
@@ -198,6 +217,12 @@ AS
 	DELETE FROM Choferes
 	WHERE Id = @Id;
 
+
+GO
+--STORE PROCEDURE PARA MOSTRAR SOLO A LOS CHOFERES, RUTAS Y AUTOBUSES SIN ASIGNAR
+
+
+
 --INSERTS DE PRUEBA
 INSERT INTO Autobuses (Id, Marca, Modelo, Placa, Color, Año, Asignado)
 	   VALUES ('1234', 'Toyota', 'Camry', 'A010203', 'Blanco', 2015, 0);
@@ -211,7 +236,26 @@ INSERT INTO Choferes (Id, Nombre, Apellido, BirthDate, Cedula, AutobusId, RutaId
 INSERT INTO Choferes (Id, Nombre, Apellido, BirthDate, Cedula, AutobusId, RutaId)
 	VALUES ('1235', 'Leonel', 'Acosta', '03-16-2001', '40219174807', NULL, NULL);
 
+INSERT INTO Choferes (Id, Nombre, Apellido, BirthDate, Cedula)
+	VALUES ('123YU8U', 'Leonel', 'Acosta', '03-16-2001', '40219174809');
+
+INSERT INTO Roles(Id, Nombre, NombreNormal)
+	VALUES ('71B7F713-A148-4752-A750-CD3C04D9FB07', 'admin', 'Administrador');
+
+INSERT INTO Roles(Id, Nombre, NombreNormal)
+	VALUES ('04EFAA89-E877-47AF-8B8A-33689461844C', 'user', 'Usuario General');
+
+INSERT INTO Roles(Id, Nombre, NombreNormal)
+	VALUES ('F3015771-8AF2-47E2-9AE6-F33635A679B4', 'root', 'ROOT');
+
+INSERT INTO Usuarios(Id, Nombre, Usuario, Password, RoleId)
+	VALUES ('C144EB70-4FAE-4CC2-AC9F-43A404D75F14', 'ADMINISTRADOR', 'admin', '1234', '71B7F713-A148-4752-A750-CD3C04D9FB07');
+
+
+GO
 --Selects
 SELECT * FROM Autobuses;
 SELECT * FROM Rutas;
 SELECT * FROM Choferes;
+SELECT * FROM Roles;
+SELECT * FROM Usuarios;

@@ -44,6 +44,8 @@ namespace CapaPresentacion
 
         private void btnAutobuses_Click(object sender, EventArgs e)
         {
+            if (formulario != null)
+                formulario.Close();
             OpenForm<FrmAutobus>();
         }
 
@@ -65,12 +67,22 @@ namespace CapaPresentacion
 
         private void btnRutas_Click(object sender, EventArgs e)
         {
+            if (formulario != null)
+                formulario.Close();
             OpenForm<FrmRuta>();
         }
 
         private void btnChoferes_Click(object sender, EventArgs e)
         {
+            if (formulario != null)
+                formulario.Close();
             OpenForm<FrmChoferes>();
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            if (formulario != null)
+                formulario.Close();
         }
     }
 }
