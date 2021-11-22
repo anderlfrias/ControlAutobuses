@@ -166,6 +166,7 @@
             this.btnChoferes.Text = "Choferes";
             this.btnChoferes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChoferes.UseVisualStyleBackColor = true;
+            this.btnChoferes.Click += new System.EventHandler(this.btnChoferes_Click);
             // 
             // btnInicio
             // 

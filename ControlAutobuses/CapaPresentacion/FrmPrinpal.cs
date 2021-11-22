@@ -67,5 +67,10 @@ namespace CapaPresentacion
         {
             OpenForm<FrmRuta>();
         }
+
+        private void btnChoferes_Click(object sender, EventArgs e)
+        {
+            OpenForm<FrmChoferes>();
+        }
     }
 }

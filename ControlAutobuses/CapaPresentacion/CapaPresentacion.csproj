@@ -52,6 +52,12 @@
     <Compile Include="FrmAutobus.Designer.cs">
       <DependentUpon>FrmAutobus.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmChoferes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChoferes.Designer.cs">
+      <DependentUpon>FrmChoferes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrinpal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAutobus.resx">
       <DependentUpon>FrmAutobus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChoferes.resx">
+      <DependentUpon>FrmChoferes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrinpal.resx">
       <DependentUpon>FrmPrinpal.cs</DependentUpon>
