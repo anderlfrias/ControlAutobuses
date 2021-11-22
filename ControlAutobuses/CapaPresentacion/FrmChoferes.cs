@@ -1,13 +1,7 @@
 ﻿using CapaEntidades;
 using CapaNegocio;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -73,7 +67,7 @@ namespace CapaPresentacion
             _chofer.Cedula = txtCedula.Text;
             _chofer.BirthDay = dtpBirthDay.Value;
 
-            var result =_chofereNegocio.Create(_chofer);
+            var result = _chofereNegocio.Create(_chofer);
 
             MessageBox.Show(result, "Information");
             Limpiar();

@@ -60,7 +60,7 @@
             this.pnlControlador.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControlador.Location = new System.Drawing.Point(0, 0);
             this.pnlControlador.Name = "pnlControlador";
-            this.pnlControlador.Size = new System.Drawing.Size(746, 32);
+            this.pnlControlador.Size = new System.Drawing.Size(762, 32);
             this.pnlControlador.TabIndex = 0;
             this.pnlControlador.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlControlador_MouseDown);
             // 
@@ -80,7 +80,7 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(717, 4);
+            this.btnClose.Location = new System.Drawing.Point(733, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(26, 23);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +101,7 @@
             this.pnlMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMenu.Location = new System.Drawing.Point(0, 32);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(140, 517);
+            this.pnlMenu.Size = new System.Drawing.Size(140, 556);
             this.pnlMenu.TabIndex = 1;
             // 
             // btnSalir
@@ -215,7 +215,7 @@
             this.pnlContenedor.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlContenedor.Location = new System.Drawing.Point(140, 32);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(606, 517);
+            this.pnlContenedor.Size = new System.Drawing.Size(622, 556);
             this.pnlContenedor.TabIndex = 2;
             // 
             // pictureBox1
@@ -254,10 +254,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(746, 549);
+            this.ClientSize = new System.Drawing.Size(762, 588);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlControlador);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(762, 588);
             this.Name = "FrmPrinpal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

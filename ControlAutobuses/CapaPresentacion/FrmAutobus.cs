@@ -1,13 +1,7 @@
 ﻿using CapaEntidades;
 using CapaNegocio;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -85,7 +79,7 @@ namespace CapaPresentacion
             Limpiar();
             MostrarAutobuses();
         }
-        
+
         private void EliminarAutobus()
         {
             string Id = dgvAutobuses.CurrentRow.Cells[0].Value.ToString();

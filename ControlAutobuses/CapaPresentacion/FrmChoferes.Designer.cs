@@ -508,7 +508,6 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCerrar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmChoferes";
             this.Text = "FrmChoferes";
             this.groupBox2.ResumeLayout(false);
