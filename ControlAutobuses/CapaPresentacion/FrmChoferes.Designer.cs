@@ -97,7 +97,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DimGray;
-            this.label13.Location = new System.Drawing.Point(325, 19);
+            this.label13.Location = new System.Drawing.Point(325, 28);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(123, 21);
             this.label13.TabIndex = 23;
@@ -108,7 +108,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(458, 19);
+            this.label9.Location = new System.Drawing.Point(458, 28);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 21);
             this.label9.TabIndex = 20;
@@ -119,7 +119,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(220, 19);
+            this.label8.Location = new System.Drawing.Point(220, 28);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 21);
             this.label8.TabIndex = 19;
@@ -130,7 +130,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(107, 19);
+            this.label7.Location = new System.Drawing.Point(107, 28);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 21);
             this.label7.TabIndex = 18;
@@ -141,7 +141,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(11, 19);
+            this.label6.Location = new System.Drawing.Point(11, 28);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 21);
             this.label6.TabIndex = 17;
@@ -177,7 +177,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvChoferes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvChoferes.Location = new System.Drawing.Point(6, 41);
+            this.dgvChoferes.Location = new System.Drawing.Point(6, 58);
             this.dgvChoferes.Name = "dgvChoferes";
             this.dgvChoferes.ReadOnly = true;
             this.dgvChoferes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -191,7 +191,7 @@
             this.dgvChoferes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChoferes.RowTemplate.Height = 35;
             this.dgvChoferes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChoferes.Size = new System.Drawing.Size(570, 183);
+            this.dgvChoferes.Size = new System.Drawing.Size(570, 166);
             this.dgvChoferes.TabIndex = 16;
             // 
             // pictureBox7
@@ -493,8 +493,7 @@
             // 
             // FrmChoferes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(602, 488);
             this.Controls.Add(this.groupBox2);

@@ -20,33 +20,26 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void OpenForm<MiForm>() where MiForm : Form, new()
-        {
-            formulario = pnlContenedor.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
-                                                                                 //si el formulario/instancia no existe
-            if (formulario == null)
+        private void OpenForm(Form form)
+        {                                                                                 //si el formulario/instancia no existe
+            if (formulario != null)
             {
-                formulario = new MiForm();
-                formulario.TopLevel = false;
-                formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.Dock = DockStyle.Fill;
-                pnlContenedor.Controls.Add(formulario);
-                pnlContenedor.Tag = formulario;
-                formulario.Show();
-                formulario.BringToFront();
+                formulario.Close();
             }
-            //si el formulario/instancia existe
-            else
-            {
-                formulario.BringToFront();
-            }
+            formulario = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            pnlContenedor.Controls.Add(form);
+            pnlContenedor.Tag = form;
+            form.Show();
+            form.BringToFront();
+            
         }
 
         private void btnAutobuses_Click(object sender, EventArgs e)
         {
-            if (formulario != null)
-                formulario.Close();
-            OpenForm<FrmAutobus>();
+            OpenForm(new FrmAutobus());
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -67,16 +60,12 @@ namespace CapaPresentacion
 
         private void btnRutas_Click(object sender, EventArgs e)
         {
-            if (formulario != null)
-                formulario.Close();
-            OpenForm<FrmRuta>();
+            OpenForm(new FrmRuta());
         }
 
         private void btnChoferes_Click(object sender, EventArgs e)
         {
-            if (formulario != null)
-                formulario.Close();
-            OpenForm<FrmChoferes>();
+            OpenForm(new FrmChoferes());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
