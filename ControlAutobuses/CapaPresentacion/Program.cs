@@ -13,10 +13,10 @@ namespace CapaPresentacion
         /// </summary>
         [STAThread]
         static void Main()
-        {
+ {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrinpal());
+            Application.Run(new FrmLogin());
         }
     }
 }

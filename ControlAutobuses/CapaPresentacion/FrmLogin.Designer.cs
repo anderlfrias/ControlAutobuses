@@ -32,7 +32,6 @@
             this.pnlFondo = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.TxtPass = new System.Windows.Forms.TextBox();
@@ -72,11 +71,11 @@
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClose.TabIndex = 9;
             this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.BtnLogin);
             this.panel1.Controls.Add(this.TxtPass);
@@ -86,20 +85,10 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(245, 74);
+            this.panel1.Location = new System.Drawing.Point(214, 88);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 335);
             this.panel1.TabIndex = 0;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(149, 283);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(60, 13);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Registrarse";
             // 
             // button1
             // 
@@ -128,6 +117,7 @@
             this.BtnLogin.TabIndex = 7;
             this.BtnLogin.Text = "LogIn";
             this.BtnLogin.UseVisualStyleBackColor = false;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // TxtPass
             // 
@@ -212,7 +202,9 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(740, 495);
             this.Controls.Add(this.pnlFondo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             this.pnlFondo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
@@ -240,6 +232,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

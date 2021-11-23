@@ -14,7 +14,7 @@ CREATE TABLE Usuarios(
 	Codigo AS('COD-'+RIGHT(Id,4)),
 	Nombre NVARCHAR(50),
 	Usuario NVARCHAR(12) UNIQUE NOT NULL,
-	Password NVARCHAR(8) NOT NULL,
+	Password NVARCHAR(255) NOT NULL,
 	RoleId NVARCHAR(255) NOT NULL
 	CONSTRAINT FK_Usuario_Role FOREIGN KEY (RoleId) REFERENCES Roles (Id)
 );
@@ -243,6 +243,23 @@ AS
 	WHERE RutaId = NULL
 		OR AutobusId = NULL
 
+GO
+--STORE PROCEDURE PARA VERIFICAR USUARIO
+CREATE PROCEDURE SP_FIND_USER_BY_USERNAME
+	@Usuario NVARCHAR(12)
+AS
+	SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.Nombre AS Role 
+	FROM Usuarios u
+	INNER JOIN Roles r ON r.Id = u.RoleId;
+
+GO
+CREATE PROCEDURE SP_FIND_USER_BY_ID
+	@Usuario NVARCHAR(12)
+AS
+	SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.Nombre AS Role 
+	FROM Usuarios u
+	INNER JOIN Roles r ON r.Id = u.RoleId
+	WHERE u.Id = @Usuario;
 
 GO
 --INSERTS DE PRUEBA
@@ -271,7 +288,7 @@ INSERT INTO Roles(Id, Nombre, NombreNormal)
 	VALUES ('F3015771-8AF2-47E2-9AE6-F33635A679B4', 'root', 'ROOT');
 
 INSERT INTO Usuarios(Id, Nombre, Usuario, Password, RoleId)
-	VALUES ('C144EB70-4FAE-4CC2-AC9F-43A404D75F14', 'ADMINISTRADOR', 'admin', '1234', '71B7F713-A148-4752-A750-CD3C04D9FB07');
+	VALUES ('C144EB70-4FAE-4CC2-AC9F-43A404D75F14', 'ADMINISTRADOR', 'admin', 'MQAyADMANAA=', '71B7F713-A148-4752-A750-CD3C04D9FB07');
 
 
 GO
@@ -281,3 +298,7 @@ SELECT * FROM Rutas;
 SELECT * FROM Choferes;
 SELECT * FROM Roles;
 SELECT * FROM Usuarios;
+
+SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.Nombre AS Role 
+FROM Usuarios u
+INNER JOIN Roles r ON r.Id = u.RoleId;
