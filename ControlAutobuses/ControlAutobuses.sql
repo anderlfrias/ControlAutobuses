@@ -250,7 +250,8 @@ CREATE PROCEDURE SP_FIND_USER_BY_USERNAME
 AS
 	SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.Nombre AS Role 
 	FROM Usuarios u
-	INNER JOIN Roles r ON r.Id = u.RoleId;
+	INNER JOIN Roles r ON r.Id = u.RoleId
+	WHERE u.Usuario = @Usuario;
 
 GO
 CREATE PROCEDURE SP_FIND_USER_BY_ID

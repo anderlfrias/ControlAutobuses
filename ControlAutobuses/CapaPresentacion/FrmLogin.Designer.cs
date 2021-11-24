@@ -115,7 +115,7 @@
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(138, 38);
             this.BtnLogin.TabIndex = 7;
-            this.BtnLogin.Text = "LogIn";
+            this.BtnLogin.Text = "Inicio";
             this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
@@ -187,13 +187,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(97, 14);
+            this.label1.Location = new System.Drawing.Point(65, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 37);
+            this.label1.Size = new System.Drawing.Size(145, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "LogIn";
+            this.label1.Text = "Iniciar Sesion";
             // 
             // FrmLogin
             // 
