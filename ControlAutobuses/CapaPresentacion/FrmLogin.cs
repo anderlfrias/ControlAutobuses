@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidades;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,13 @@ namespace CapaPresentacion
 {
     public partial class FrmLogin : Form
     {
+        readonly UserNegocio _userNegocio;
+        User _user;
 
         public FrmLogin()
         {
             InitializeComponent();
+            _userNegocio = new UserNegocio();
         }
 
         //Metodos
@@ -35,6 +40,28 @@ namespace CapaPresentacion
             TxtUser.Text = "Usuario";
             TxtPass.UseSystemPasswordChar = false;
             TxtPass.Text = "Contraseña";
+        }
+
+        private bool VerificarUsuario(string userName)
+        {
+            _user = _userNegocio.GetByUserName(userName);
+
+            if (_user == null)
+                return false;
+
+            return true;
+        }
+
+        private bool VerificarPassword(string password)
+        {
+            //MessageBox.Show(password, "Password de la base de datos");
+            string passDb = DecryptPassword(password);
+            //MessageBox.Show(passDb, "Password desencriptada");
+
+            if (TxtPass.Text == passDb)
+                return true;
+
+            return false;
         }
 
         //Encriptar Contraseña
@@ -97,8 +124,23 @@ namespace CapaPresentacion
             }
             else
             {
-                TxtUser.Text = DecryptPassword("MQAyADMANAA=");
-                MessageBox.Show(EncryptPassword(TxtUser.Text));
+                if (VerificarUsuario(TxtUser.Text))
+                {
+                    if (VerificarPassword(_user.Password))
+                    {
+                        MessageBox.Show("Usuario y contraseña correctos", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        //Abrir form aqui
+                        MessageBox.Show("Contraseña Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Limpiar();
+                }
             }
         }
 
