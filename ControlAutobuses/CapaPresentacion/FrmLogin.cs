@@ -64,16 +64,6 @@ namespace CapaPresentacion
             return false;
         }
 
-        //Encriptar Contraseña
-        private string EncryptPassword(string password)
-        {
-            string result = string.Empty;
-            byte[] encryted = Encoding.Unicode.GetBytes(password);
-            result = Convert.ToBase64String(encryted);
-
-            return result;
-        }
-
         //Desencriptar Contraseña
         private string DecryptPassword(string password)
         {

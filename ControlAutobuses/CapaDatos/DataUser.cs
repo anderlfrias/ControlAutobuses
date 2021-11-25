@@ -17,7 +17,7 @@ namespace CapaDatos
             parameters.Add(new SqlParameter("@Nombre", model.Nombre));
             parameters.Add(new SqlParameter("@Usuario", model.Usuario));
             parameters.Add(new SqlParameter("@Password", model.Password));
-            parameters.Add(new SqlParameter("@Password", model.Password));
+            parameters.Add(new SqlParameter("@RoleId", model.RoleId));
 
             this.SqlDataReader = this.SqlQuery("SP_REGISTER_USUARIO", parameters);
 

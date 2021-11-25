@@ -34,7 +34,7 @@ namespace CapaNegocio
         {
             if ((string.IsNullOrEmpty(model.Usuario)) || (string.IsNullOrEmpty(model.Password)))
             {
-                message = "Asegurese de completar correctamento los campos de usuario y contrasea;"
+                message = "Asegurese de completar correctamento los campos de usuario y contraseña";
             }
             else 
             {

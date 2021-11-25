@@ -32,6 +32,8 @@
             this.pnlFondo = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnRegistro = new System.Windows.Forms.Button();
             this.TxtPass = new System.Windows.Forms.TextBox();
@@ -39,14 +41,12 @@
             this.TxtUser = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlFondo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFondo
@@ -89,6 +89,28 @@
             this.panel1.Size = new System.Drawing.Size(274, 335);
             this.panel1.TabIndex = 0;
             // 
+            // txtNombre
+            // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(47, 83);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(187, 22);
+            this.txtNombre.TabIndex = 0;
+            this.txtNombre.Text = "Nombre";
+            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(36, 74);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(207, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // BtnCancelar
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.Gray;
@@ -99,7 +121,7 @@
             this.BtnCancelar.Location = new System.Drawing.Point(69, 284);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(138, 31);
-            this.BtnCancelar.TabIndex = 8;
+            this.BtnCancelar.TabIndex = 4;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
@@ -114,9 +136,10 @@
             this.BtnRegistro.Location = new System.Drawing.Point(69, 240);
             this.BtnRegistro.Name = "BtnRegistro";
             this.BtnRegistro.Size = new System.Drawing.Size(138, 31);
-            this.BtnRegistro.TabIndex = 7;
+            this.BtnRegistro.TabIndex = 3;
             this.BtnRegistro.Text = "Registrarse";
             this.BtnRegistro.UseVisualStyleBackColor = false;
+            this.BtnRegistro.Click += new System.EventHandler(this.BtnRegistro_Click);
             // 
             // TxtPass
             // 
@@ -125,7 +148,7 @@
             this.TxtPass.Location = new System.Drawing.Point(47, 190);
             this.TxtPass.Name = "TxtPass";
             this.TxtPass.Size = new System.Drawing.Size(187, 22);
-            this.TxtPass.TabIndex = 6;
+            this.TxtPass.TabIndex = 2;
             this.TxtPass.Tag = "";
             this.TxtPass.Text = "Contraseña";
             this.TxtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPass_KeyDown);
@@ -148,7 +171,7 @@
             this.TxtUser.Location = new System.Drawing.Point(47, 137);
             this.TxtUser.Name = "TxtUser";
             this.TxtUser.Size = new System.Drawing.Size(187, 22);
-            this.TxtUser.TabIndex = 3;
+            this.TxtUser.TabIndex = 1;
             this.TxtUser.Text = "Usuario";
             this.TxtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUser_KeyDown);
             this.TxtUser.Leave += new System.EventHandler(this.TxtUser_Leave);
@@ -174,28 +197,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Registrarse";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(47, 83);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(187, 22);
-            this.txtNombre.TabIndex = 10;
-            this.txtNombre.Text = "Nombre";
-            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
-            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(36, 74);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(207, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
             // FrmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,14 +205,15 @@
             this.Controls.Add(this.pnlFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmRegistro";
             this.pnlFondo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

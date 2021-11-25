@@ -46,6 +46,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="DataAutobus.cs" />
     <Compile Include="DataChofer.cs" />
+    <Compile Include="DataRole.cs" />
     <Compile Include="DataRuta.cs" />
     <Compile Include="DataUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

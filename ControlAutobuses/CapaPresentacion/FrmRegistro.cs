@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidades;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,64 @@ namespace CapaPresentacion
 {
     public partial class FrmRegistro : Form
     {
+        readonly UserNegocio _userNegocio;
+        readonly RoleNegocio _roleNegocio;
+        User _user;
+
         public FrmRegistro()
         {
             InitializeComponent();
+            _userNegocio = new UserNegocio();
+            _roleNegocio = new RoleNegocio();
+        }
+
+        //Metodos
+        private bool ValidarCampos()
+        {
+            if ((string.IsNullOrEmpty(txtNombre.Text)) || (txtNombre.Text == "Nombre"))
+                return false;
+            else if ((string.IsNullOrEmpty(TxtUser.Text)) || (TxtUser.Text == "Usuario"))
+                return false;
+            else if ((string.IsNullOrEmpty(TxtPass.Text)) || (TxtPass.Text == "Contraseña"))
+                return false;
+            else
+                return true;
+        }
+
+        private string RegistrarUsuario(string nombre, string userName, string password)
+        {
+            _user = new User();
+            _user.Nombre = nombre;
+            _user.Usuario = userName;
+            _user.Password = EncryptPassword(password);
+            _user.RoleId = DefaultRole();
+
+            var result = _userNegocio.Create(_user);
+            return result;
+        }
+
+        //Encriptar Contraseña
+        private string EncryptPassword(string password)
+        {
+            string result = string.Empty;
+            byte[] encryted = Encoding.Unicode.GetBytes(password);
+            result = Convert.ToBase64String(encryted);
+
+            return result;
+        }
+
+        //Obtener el role por defecto cada vez que se ingrese un usuario
+        private string DefaultRole()
+        {
+            var result = _roleNegocio.GetByRoleName("user");
+            return result.Id;
+        }
+
+        private void Cerrar()
+        {
+            FrmLogin login = new FrmLogin();
+            this.Close();
+            login.Visible = true;
         }
 
         //Eventos
@@ -63,16 +120,34 @@ namespace CapaPresentacion
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            FrmLogin login = new FrmLogin();
-            this.Close();
-            login.Visible = true;
+            Cerrar();
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            FrmLogin login = new FrmLogin();
-            this.Close();
-            login.Visible = true;
+            Cerrar();
+        }
+
+        private void BtnRegistro_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                var res = RegistrarUsuario(txtNombre.Text, TxtUser.Text, TxtPass.Text);
+                MessageBox.Show(res,
+                                "Informacion de Registro",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+
+                if (res == "Registro exitoso")
+                    Cerrar();
+            }
+            else
+            {
+                MessageBox.Show("Asegurese de competar todos los campos.",
+                                "Advertencia",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+            }
         }
     }
 }

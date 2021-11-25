@@ -46,6 +46,7 @@
     <Compile Include="AutobusNegocio.cs" />
     <Compile Include="ChoferNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleNegocio.cs" />
     <Compile Include="RutaNegocio.cs" />
     <Compile Include="UserNegocio.cs" />
   </ItemGroup>
