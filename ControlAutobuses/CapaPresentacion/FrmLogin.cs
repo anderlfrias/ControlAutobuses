@@ -151,5 +151,17 @@ namespace CapaPresentacion
         {
             Application.Exit();
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LnkRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmRegistro frmRegistro = new FrmRegistro();
+            this.Visible = false;
+            frmRegistro.Show();
+        }
     }
 }

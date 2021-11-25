@@ -32,7 +32,7 @@
             this.pnlFondo = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.TxtPass = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -41,6 +41,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.LnkRegistro = new System.Windows.Forms.LinkLabel();
             this.pnlFondo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panel1.SuspendLayout();
@@ -76,7 +77,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.LnkRegistro);
+            this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.BtnLogin);
             this.panel1.Controls.Add(this.TxtPass);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -90,19 +92,20 @@
             this.panel1.Size = new System.Drawing.Size(274, 335);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // BtnSalir
             // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(71, 238);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 38);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnSalir.BackColor = System.Drawing.Color.Gray;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.ForeColor = System.Drawing.Color.White;
+            this.BtnSalir.Location = new System.Drawing.Point(71, 238);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(138, 38);
+            this.BtnSalir.TabIndex = 8;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnLogin
             // 
@@ -195,6 +198,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Iniciar Sesion";
             // 
+            // LnkRegistro
+            // 
+            this.LnkRegistro.AutoSize = true;
+            this.LnkRegistro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkRegistro.Location = new System.Drawing.Point(138, 280);
+            this.LnkRegistro.Name = "LnkRegistro";
+            this.LnkRegistro.Size = new System.Drawing.Size(71, 17);
+            this.LnkRegistro.TabIndex = 9;
+            this.LnkRegistro.TabStop = true;
+            this.LnkRegistro.Text = "Registrate!";
+            this.LnkRegistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkRegistro_LinkClicked);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,7 +238,7 @@
         private System.Windows.Forms.Panel pnlFondo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnClose;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.TextBox TxtPass;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -232,5 +247,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel LnkRegistro;
     }
 }

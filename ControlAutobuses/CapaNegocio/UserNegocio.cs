@@ -29,5 +29,31 @@ namespace CapaNegocio
             var result = _dataUser.FindById(id);
             return result;
         }
+
+        public string Create(User model)
+        {
+            if ((string.IsNullOrEmpty(model.Usuario)) || (string.IsNullOrEmpty(model.Password)))
+            {
+                message = "Asegurese de completar correctamento los campos de usuario y contrasea;"
+            }
+            else 
+            {
+                try
+                {
+                    model.Id = Guid.NewGuid().ToString().ToUpper();
+                    _dataUser.Add(model);
+                    message = "Registro exitoso";
+                }
+                catch(Exception ex)
+                {
+                    if (ex.InnerException != null)
+                        message = ex.InnerException.Message;
+                    else
+                        message = ex.Message;
+                }
+            }
+
+            return message;
+        }
     }
 }

@@ -10,6 +10,19 @@ namespace CapaDatos
 {
     public class DataUser : Conexion
     {
+        public void Add(User model)
+        {
+            IList<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@Id", model.Id));
+            parameters.Add(new SqlParameter("@Nombre", model.Nombre));
+            parameters.Add(new SqlParameter("@Usuario", model.Usuario));
+            parameters.Add(new SqlParameter("@Password", model.Password));
+            parameters.Add(new SqlParameter("@Password", model.Password));
+
+            this.SqlDataReader = this.SqlQuery("SP_REGISTER_USUARIO", parameters);
+
+            this.sqlConnection.Close();
+        }
         public User FindByUserName(string userName)
         {
             try

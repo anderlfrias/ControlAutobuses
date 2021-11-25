@@ -96,6 +96,9 @@
     <EmbeddedResource Include="FrmPrinpal.resx">
       <DependentUpon>FrmPrinpal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistro.resx">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRuta.resx">
       <DependentUpon>FrmRuta.cs</DependentUpon>
     </EmbeddedResource>

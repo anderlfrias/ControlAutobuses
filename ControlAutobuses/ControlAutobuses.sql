@@ -244,6 +244,28 @@ AS
 		OR AutobusId = NULL
 
 GO
+
+
+--STORE PROCEDURE PARA USUARIOS
+CREATE PROCEDURE SP_REGISTER_USUARIO
+	@Id NVARCHAR(255),
+	@Nombre NVARCHAR(50),
+	@Usuario NVARCHAR(12),
+	@Password NVARCHAR(255),
+	@RoleId NVARCHAR(255)
+AS
+	INSERT INTO Usuarios (Id, Nombre, Usuario, Password, RoleId)
+		VALUES (@Id, @Nombre, @Usuario, @Password, @RoleId);
+
+GO
+CREATE PROCEDURE SP_CHANGE_USER_ROLE
+	@Id NVARCHAR(255),
+	@RoleId NVARCHAR(255)
+AS
+	UPDATE Usuarios
+	SET RoleId = @RoleId
+	WHERE Id = @Id;
+
 --STORE PROCEDURE PARA VERIFICAR USUARIO
 CREATE PROCEDURE SP_FIND_USER_BY_USERNAME
 	@Usuario NVARCHAR(12)
@@ -263,8 +285,10 @@ AS
 	WHERE u.Id = @Usuario;
 
 GO
+
+
 --INSERTS DE PRUEBA
-INSERT INTO Autobuses (Id, Marca, Modelo, Placa, Color, Año, Asignado)
+INSERT INTO Autobuses (Id, Marca, Modelo, Placa, Color, Anioo, Asignado)
 	   VALUES ('1234', 'Toyota', 'Camry', 'A010203', 'Blanco', 2015, 0);
 
 INSERT INTO Rutas (Id, Nombre, Descripcion, Asingnado)
