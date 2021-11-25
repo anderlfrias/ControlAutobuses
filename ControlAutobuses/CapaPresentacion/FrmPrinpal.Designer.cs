@@ -43,6 +43,9 @@
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnInformes = new System.Windows.Forms.Button();
+            this.btnConfiguraciones = new System.Windows.Forms.Button();
+            this.pnlConfiguraciones = new System.Windows.Forms.Panel();
             this.pnlControlador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.pnlMenu.SuspendLayout();
@@ -50,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlConfiguraciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlControlador
@@ -92,16 +96,16 @@
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(136)))));
             this.pnlMenu.Controls.Add(this.btnSalir);
-            this.pnlMenu.Controls.Add(this.btnRutas);
-            this.pnlMenu.Controls.Add(this.btnAutobuses);
-            this.pnlMenu.Controls.Add(this.btnChoferes);
+            this.pnlMenu.Controls.Add(this.pnlConfiguraciones);
+            this.pnlMenu.Controls.Add(this.btnConfiguraciones);
+            this.pnlMenu.Controls.Add(this.btnInformes);
             this.pnlMenu.Controls.Add(this.btnInicio);
             this.pnlMenu.Controls.Add(this.pnlLogo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMenu.Location = new System.Drawing.Point(0, 32);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(140, 556);
+            this.pnlMenu.Size = new System.Drawing.Size(184, 556);
             this.pnlMenu.TabIndex = 1;
             // 
             // btnSalir
@@ -112,12 +116,13 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(0, 266);
+            this.btnSalir.Location = new System.Drawing.Point(0, 344);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(140, 38);
+            this.btnSalir.Size = new System.Drawing.Size(184, 38);
             this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "        Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
@@ -131,9 +136,9 @@
             this.btnRutas.ForeColor = System.Drawing.Color.White;
             this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
             this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutas.Location = new System.Drawing.Point(0, 228);
+            this.btnRutas.Location = new System.Drawing.Point(0, 0);
             this.btnRutas.Name = "btnRutas";
-            this.btnRutas.Size = new System.Drawing.Size(140, 38);
+            this.btnRutas.Size = new System.Drawing.Size(184, 38);
             this.btnRutas.TabIndex = 5;
             this.btnRutas.Text = "        Rutas";
             this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,9 +155,9 @@
             this.btnAutobuses.ForeColor = System.Drawing.Color.White;
             this.btnAutobuses.Image = ((System.Drawing.Image)(resources.GetObject("btnAutobuses.Image")));
             this.btnAutobuses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAutobuses.Location = new System.Drawing.Point(0, 190);
+            this.btnAutobuses.Location = new System.Drawing.Point(0, 38);
             this.btnAutobuses.Name = "btnAutobuses";
-            this.btnAutobuses.Size = new System.Drawing.Size(140, 38);
+            this.btnAutobuses.Size = new System.Drawing.Size(184, 38);
             this.btnAutobuses.TabIndex = 4;
             this.btnAutobuses.Text = "        Autobuses";
             this.btnAutobuses.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -169,9 +174,9 @@
             this.btnChoferes.ForeColor = System.Drawing.Color.White;
             this.btnChoferes.Image = ((System.Drawing.Image)(resources.GetObject("btnChoferes.Image")));
             this.btnChoferes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoferes.Location = new System.Drawing.Point(0, 152);
+            this.btnChoferes.Location = new System.Drawing.Point(0, 76);
             this.btnChoferes.Name = "btnChoferes";
-            this.btnChoferes.Size = new System.Drawing.Size(140, 38);
+            this.btnChoferes.Size = new System.Drawing.Size(184, 38);
             this.btnChoferes.TabIndex = 3;
             this.btnChoferes.Text = "        Choferes";
             this.btnChoferes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,7 +195,7 @@
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.Location = new System.Drawing.Point(0, 114);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(140, 38);
+            this.btnInicio.Size = new System.Drawing.Size(184, 38);
             this.btnInicio.TabIndex = 2;
             this.btnInicio.Text = "        Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +208,7 @@
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(140, 114);
+            this.pnlLogo.Size = new System.Drawing.Size(184, 114);
             this.pnlLogo.TabIndex = 0;
             // 
             // pictureBox2
@@ -223,9 +228,9 @@
             this.pnlContenedor.Controls.Add(this.pictureBox1);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlContenedor.Location = new System.Drawing.Point(140, 32);
+            this.pnlContenedor.Location = new System.Drawing.Point(184, 32);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(622, 556);
+            this.pnlContenedor.Size = new System.Drawing.Size(578, 556);
             this.pnlContenedor.TabIndex = 2;
             // 
             // lblTitulo
@@ -248,6 +253,57 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnInformes
+            // 
+            this.btnInformes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInformes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInformes.FlatAppearance.BorderSize = 0;
+            this.btnInformes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformes.ForeColor = System.Drawing.Color.White;
+            this.btnInformes.Image = ((System.Drawing.Image)(resources.GetObject("btnInformes.Image")));
+            this.btnInformes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformes.Location = new System.Drawing.Point(0, 152);
+            this.btnInformes.Name = "btnInformes";
+            this.btnInformes.Size = new System.Drawing.Size(184, 38);
+            this.btnInformes.TabIndex = 3;
+            this.btnInformes.Text = "        Viajes";
+            this.btnInformes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformes.UseVisualStyleBackColor = true;
+            this.btnInformes.Click += new System.EventHandler(this.btnInformes_Click);
+            // 
+            // btnConfiguraciones
+            // 
+            this.btnConfiguraciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConfiguraciones.FlatAppearance.BorderSize = 0;
+            this.btnConfiguraciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguraciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguraciones.ForeColor = System.Drawing.Color.White;
+            this.btnConfiguraciones.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguraciones.Image")));
+            this.btnConfiguraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguraciones.Location = new System.Drawing.Point(0, 190);
+            this.btnConfiguraciones.Name = "btnConfiguraciones";
+            this.btnConfiguraciones.Size = new System.Drawing.Size(184, 38);
+            this.btnConfiguraciones.TabIndex = 4;
+            this.btnConfiguraciones.Text = "        Configuraciones";
+            this.btnConfiguraciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguraciones.UseVisualStyleBackColor = true;
+            this.btnConfiguraciones.Click += new System.EventHandler(this.btnConfiguraciones_Click);
+            // 
+            // pnlConfiguraciones
+            // 
+            this.pnlConfiguraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(90)))));
+            this.pnlConfiguraciones.Controls.Add(this.btnChoferes);
+            this.pnlConfiguraciones.Controls.Add(this.btnAutobuses);
+            this.pnlConfiguraciones.Controls.Add(this.btnRutas);
+            this.pnlConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlConfiguraciones.Location = new System.Drawing.Point(0, 228);
+            this.pnlConfiguraciones.Name = "pnlConfiguraciones";
+            this.pnlConfiguraciones.Size = new System.Drawing.Size(184, 116);
+            this.pnlConfiguraciones.TabIndex = 5;
+            this.pnlConfiguraciones.Visible = false;
             // 
             // FrmPrinpal
             // 
@@ -272,6 +328,7 @@
             this.pnlContenedor.ResumeLayout(false);
             this.pnlContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlConfiguraciones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -292,6 +349,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Panel pnlConfiguraciones;
+        private System.Windows.Forms.Button btnConfiguraciones;
+        private System.Windows.Forms.Button btnInformes;
     }
 }
 

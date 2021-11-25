@@ -125,5 +125,18 @@ namespace CapaPresentacion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnConfiguraciones_Click(object sender, EventArgs e)
+        {
+            if (!pnlConfiguraciones.Visible)
+                pnlConfiguraciones.Visible = true;
+            else
+                pnlConfiguraciones.Visible = false;
+        }
+
+        private void btnInformes_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmInformes());
+        }
     }
 }

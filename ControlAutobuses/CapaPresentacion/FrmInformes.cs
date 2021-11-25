@@ -20,10 +20,17 @@ namespace CapaPresentacion
             _viajesNegocio = new ViajesNegocio();
             MostarViajes();
         }
-
+        
+        //Metodos
         private void MostarViajes()
         {
             dtgViajes.DataSource = _viajesNegocio.GetViajes();
+        }
+
+        //Eventos
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

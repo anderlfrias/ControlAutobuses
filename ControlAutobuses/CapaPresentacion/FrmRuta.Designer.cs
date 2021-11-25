@@ -141,7 +141,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
             this.groupBox1.Location = new System.Drawing.Point(11, 88);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 173);
+            this.groupBox1.Size = new System.Drawing.Size(373, 173);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de las rutas";
@@ -249,7 +249,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(454, 216);
+            this.btnEliminar.Location = new System.Drawing.Point(440, 220);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(126, 33);
             this.btnEliminar.TabIndex = 32;
@@ -266,7 +266,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(454, 177);
+            this.btnGuardar.Location = new System.Drawing.Point(440, 181);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(126, 33);
             this.btnGuardar.TabIndex = 31;
@@ -283,7 +283,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(454, 138);
+            this.btnEditar.Location = new System.Drawing.Point(440, 142);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(126, 33);
             this.btnEditar.TabIndex = 30;
@@ -300,7 +300,7 @@
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(454, 99);
+            this.btnNuevo.Location = new System.Drawing.Point(440, 103);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(126, 33);
             this.btnNuevo.TabIndex = 29;
@@ -320,7 +320,7 @@
             this.groupBox2.Controls.Add(this.dgvRutas);
             this.groupBox2.Location = new System.Drawing.Point(11, 267);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(575, 243);
+            this.groupBox2.Size = new System.Drawing.Size(555, 282);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             // 
@@ -329,7 +329,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(477, 19);
+            this.label11.Location = new System.Drawing.Point(453, 19);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(92, 21);
             this.label11.TabIndex = 22;
@@ -412,14 +412,14 @@
             this.dgvRutas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRutas.RowTemplate.Height = 35;
             this.dgvRutas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRutas.Size = new System.Drawing.Size(563, 196);
+            this.dgvRutas.Size = new System.Drawing.Size(543, 235);
             this.dgvRutas.TabIndex = 16;
             // 
             // FrmRuta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(602, 517);
+            this.ClientSize = new System.Drawing.Size(578, 556);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
@@ -431,6 +431,7 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCerrar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRuta";
             this.Text = "FrmRuta";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
