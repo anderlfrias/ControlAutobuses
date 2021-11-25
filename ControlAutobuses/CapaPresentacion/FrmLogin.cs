@@ -128,11 +128,14 @@ namespace CapaPresentacion
                 {
                     if (VerificarPassword(_user.Password))
                     {
-                        MessageBox.Show("Usuario y contraseña correctos", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        //Abrir form aqui
+                        FrmPrinpal frmPrinpal = new FrmPrinpal(_user.Id);
+                        this.Visible = false;
+                        frmPrinpal.Show();
+                        //MessageBox.Show("Usuario y contraseña correctos", "Listo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
-                        //Abrir form aqui
                         MessageBox.Show("Contraseña Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }

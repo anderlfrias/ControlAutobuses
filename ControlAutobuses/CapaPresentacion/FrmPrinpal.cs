@@ -14,12 +14,18 @@ namespace CapaPresentacion
 {
     public partial class FrmPrinpal : Form
     {
+        readonly UserNegocio _userNegocio;
         private Form formulario;
-        public FrmPrinpal()
+        private string _idUsuario;
+
+        public FrmPrinpal(string idUsuario)
         {
             InitializeComponent();
+            _idUsuario = idUsuario;
+            _userNegocio = new UserNegocio();
         }
 
+        //Metodos
         private void OpenForm(Form form)
         {                                                                                 //si el formulario/instancia no existe
             if (formulario != null)
@@ -37,14 +43,76 @@ namespace CapaPresentacion
             
         }
 
+        private string DisplayUserRole()
+        {
+            var result = _userNegocio.GetById(_idUsuario);
+
+            if (result == null)
+                return "Usuario no encontrado";
+
+            return result.Role;
+        }
+
+        //Eventos
         private void btnAutobuses_Click(object sender, EventArgs e)
         {
-            OpenForm(new FrmAutobus());
+            if (DisplayUserRole() == "admin")
+            {
+                OpenForm(new FrmAutobus());
+            }
+            else
+            {
+                MessageBox.Show("No tienes los permisos  necesarios\n" +
+                    "para abrir este formulario",
+                    "Advertencia",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+        
+        private void btnRutas_Click(object sender, EventArgs e)
+        {
+            if (DisplayUserRole() == "admin")
+            {
+                OpenForm(new FrmRuta());
+            }
+            else
+            {
+                MessageBox.Show("No tienes los permisos  necesarios\n" +
+                    "para abrir este formulario",
+                    "Advertencia",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnChoferes_Click(object sender, EventArgs e)
+        {
+            if (DisplayUserRole() == "admin")
+            {
+                OpenForm(new FrmChoferes());
+            }
+            else
+            {
+                MessageBox.Show("No tienes los permisos  necesarios\n" +
+                    "para abrir este formulario",
+                    "Advertencia",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            };
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            if (formulario != null)
+                formulario.Close();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FrmLogin login = new FrmLogin();
+            this.Close();
+            login.Visible = true;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -56,22 +124,6 @@ namespace CapaPresentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnRutas_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FrmRuta());
-        }
-
-        private void btnChoferes_Click(object sender, EventArgs e)
-        {
-            OpenForm(new FrmChoferes());
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            if (formulario != null)
-                formulario.Close();
         }
     }
 }

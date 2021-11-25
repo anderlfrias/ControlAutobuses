@@ -70,6 +70,12 @@
     <Compile Include="FrmPrinpal.Designer.cs">
       <DependentUpon>FrmPrinpal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistro.Designer.cs">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRuta.cs">
       <SubType>Form</SubType>
     </Compile>
