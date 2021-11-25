@@ -23,6 +23,7 @@ namespace CapaDatos
 
             this.sqlConnection.Close();
         }
+
         public User FindByUserName(string userName)
         {
             try

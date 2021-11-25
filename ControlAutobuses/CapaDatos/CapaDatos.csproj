@@ -49,6 +49,7 @@
     <Compile Include="DataRole.cs" />
     <Compile Include="DataRuta.cs" />
     <Compile Include="DataUser.cs" />
+    <Compile Include="DataViajes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
