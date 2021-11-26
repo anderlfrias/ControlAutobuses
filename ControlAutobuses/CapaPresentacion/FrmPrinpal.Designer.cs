@@ -34,26 +34,26 @@
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnRutas = new System.Windows.Forms.Button();
-            this.btnAutobuses = new System.Windows.Forms.Button();
+            this.pnlConfiguraciones = new System.Windows.Forms.Panel();
             this.btnChoferes = new System.Windows.Forms.Button();
+            this.btnAutobuses = new System.Windows.Forms.Button();
+            this.btnRutas = new System.Windows.Forms.Button();
+            this.btnConfiguraciones = new System.Windows.Forms.Button();
+            this.btnInformes = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnInformes = new System.Windows.Forms.Button();
-            this.btnConfiguraciones = new System.Windows.Forms.Button();
-            this.pnlConfiguraciones = new System.Windows.Forms.Panel();
             this.pnlControlador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            this.pnlConfiguraciones.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlConfiguraciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlControlador
@@ -64,7 +64,7 @@
             this.pnlControlador.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControlador.Location = new System.Drawing.Point(0, 0);
             this.pnlControlador.Name = "pnlControlador";
-            this.pnlControlador.Size = new System.Drawing.Size(762, 32);
+            this.pnlControlador.Size = new System.Drawing.Size(806, 32);
             this.pnlControlador.TabIndex = 0;
             this.pnlControlador.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlControlador_MouseDown);
             // 
@@ -84,7 +84,7 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(733, 4);
+            this.btnClose.Location = new System.Drawing.Point(777, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(26, 23);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +118,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(0, 344);
+            this.btnSalir.Location = new System.Drawing.Point(0, 338);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(184, 38);
             this.btnSalir.TabIndex = 6;
@@ -126,24 +126,37 @@
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // btnRutas
+            // pnlConfiguraciones
             // 
-            this.btnRutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRutas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRutas.FlatAppearance.BorderSize = 0;
-            this.btnRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRutas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRutas.ForeColor = System.Drawing.Color.White;
-            this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
-            this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutas.Location = new System.Drawing.Point(0, 0);
-            this.btnRutas.Name = "btnRutas";
-            this.btnRutas.Size = new System.Drawing.Size(184, 38);
-            this.btnRutas.TabIndex = 5;
-            this.btnRutas.Text = "        Rutas";
-            this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRutas.UseVisualStyleBackColor = true;
-            this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
+            this.pnlConfiguraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(90)))));
+            this.pnlConfiguraciones.Controls.Add(this.btnChoferes);
+            this.pnlConfiguraciones.Controls.Add(this.btnAutobuses);
+            this.pnlConfiguraciones.Controls.Add(this.btnRutas);
+            this.pnlConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlConfiguraciones.Location = new System.Drawing.Point(0, 228);
+            this.pnlConfiguraciones.Name = "pnlConfiguraciones";
+            this.pnlConfiguraciones.Size = new System.Drawing.Size(184, 110);
+            this.pnlConfiguraciones.TabIndex = 5;
+            this.pnlConfiguraciones.Visible = false;
+            // 
+            // btnChoferes
+            // 
+            this.btnChoferes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnChoferes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChoferes.FlatAppearance.BorderSize = 0;
+            this.btnChoferes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChoferes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoferes.ForeColor = System.Drawing.Color.White;
+            this.btnChoferes.Image = ((System.Drawing.Image)(resources.GetObject("btnChoferes.Image")));
+            this.btnChoferes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChoferes.Location = new System.Drawing.Point(0, 76);
+            this.btnChoferes.Name = "btnChoferes";
+            this.btnChoferes.Size = new System.Drawing.Size(184, 38);
+            this.btnChoferes.TabIndex = 3;
+            this.btnChoferes.Text = "        Choferes";
+            this.btnChoferes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChoferes.UseVisualStyleBackColor = true;
+            this.btnChoferes.Click += new System.EventHandler(this.btnChoferes_Click);
             // 
             // btnAutobuses
             // 
@@ -164,24 +177,62 @@
             this.btnAutobuses.UseVisualStyleBackColor = true;
             this.btnAutobuses.Click += new System.EventHandler(this.btnAutobuses_Click);
             // 
-            // btnChoferes
+            // btnRutas
             // 
-            this.btnChoferes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnChoferes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChoferes.FlatAppearance.BorderSize = 0;
-            this.btnChoferes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChoferes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChoferes.ForeColor = System.Drawing.Color.White;
-            this.btnChoferes.Image = ((System.Drawing.Image)(resources.GetObject("btnChoferes.Image")));
-            this.btnChoferes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoferes.Location = new System.Drawing.Point(0, 76);
-            this.btnChoferes.Name = "btnChoferes";
-            this.btnChoferes.Size = new System.Drawing.Size(184, 38);
-            this.btnChoferes.TabIndex = 3;
-            this.btnChoferes.Text = "        Choferes";
-            this.btnChoferes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChoferes.UseVisualStyleBackColor = true;
-            this.btnChoferes.Click += new System.EventHandler(this.btnChoferes_Click);
+            this.btnRutas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRutas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRutas.FlatAppearance.BorderSize = 0;
+            this.btnRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRutas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRutas.ForeColor = System.Drawing.Color.White;
+            this.btnRutas.Image = ((System.Drawing.Image)(resources.GetObject("btnRutas.Image")));
+            this.btnRutas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutas.Location = new System.Drawing.Point(0, 0);
+            this.btnRutas.Name = "btnRutas";
+            this.btnRutas.Size = new System.Drawing.Size(184, 38);
+            this.btnRutas.TabIndex = 5;
+            this.btnRutas.Text = "        Rutas";
+            this.btnRutas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRutas.UseVisualStyleBackColor = true;
+            this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
+            // 
+            // btnConfiguraciones
+            // 
+            this.btnConfiguraciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConfiguraciones.FlatAppearance.BorderSize = 0;
+            this.btnConfiguraciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguraciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguraciones.ForeColor = System.Drawing.Color.White;
+            this.btnConfiguraciones.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguraciones.Image")));
+            this.btnConfiguraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguraciones.Location = new System.Drawing.Point(0, 190);
+            this.btnConfiguraciones.Name = "btnConfiguraciones";
+            this.btnConfiguraciones.Size = new System.Drawing.Size(184, 38);
+            this.btnConfiguraciones.TabIndex = 4;
+            this.btnConfiguraciones.Text = "        Configuraciones";
+            this.btnConfiguraciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguraciones.UseVisualStyleBackColor = true;
+            this.btnConfiguraciones.Click += new System.EventHandler(this.btnConfiguraciones_Click);
+            // 
+            // btnInformes
+            // 
+            this.btnInformes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInformes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInformes.FlatAppearance.BorderSize = 0;
+            this.btnInformes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformes.ForeColor = System.Drawing.Color.White;
+            this.btnInformes.Image = ((System.Drawing.Image)(resources.GetObject("btnInformes.Image")));
+            this.btnInformes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformes.Location = new System.Drawing.Point(0, 152);
+            this.btnInformes.Name = "btnInformes";
+            this.btnInformes.Size = new System.Drawing.Size(184, 38);
+            this.btnInformes.TabIndex = 3;
+            this.btnInformes.Text = "        Viajes";
+            this.btnInformes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformes.UseVisualStyleBackColor = true;
+            this.btnInformes.Click += new System.EventHandler(this.btnInformes_Click);
             // 
             // btnInicio
             // 
@@ -230,7 +281,7 @@
             this.pnlContenedor.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlContenedor.Location = new System.Drawing.Point(184, 32);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(578, 556);
+            this.pnlContenedor.Size = new System.Drawing.Size(622, 556);
             this.pnlContenedor.TabIndex = 2;
             // 
             // lblTitulo
@@ -254,63 +305,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnInformes
-            // 
-            this.btnInformes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnInformes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInformes.FlatAppearance.BorderSize = 0;
-            this.btnInformes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInformes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInformes.ForeColor = System.Drawing.Color.White;
-            this.btnInformes.Image = ((System.Drawing.Image)(resources.GetObject("btnInformes.Image")));
-            this.btnInformes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInformes.Location = new System.Drawing.Point(0, 152);
-            this.btnInformes.Name = "btnInformes";
-            this.btnInformes.Size = new System.Drawing.Size(184, 38);
-            this.btnInformes.TabIndex = 3;
-            this.btnInformes.Text = "        Viajes";
-            this.btnInformes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInformes.UseVisualStyleBackColor = true;
-            this.btnInformes.Click += new System.EventHandler(this.btnInformes_Click);
-            // 
-            // btnConfiguraciones
-            // 
-            this.btnConfiguraciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConfiguraciones.FlatAppearance.BorderSize = 0;
-            this.btnConfiguraciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguraciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguraciones.ForeColor = System.Drawing.Color.White;
-            this.btnConfiguraciones.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguraciones.Image")));
-            this.btnConfiguraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguraciones.Location = new System.Drawing.Point(0, 190);
-            this.btnConfiguraciones.Name = "btnConfiguraciones";
-            this.btnConfiguraciones.Size = new System.Drawing.Size(184, 38);
-            this.btnConfiguraciones.TabIndex = 4;
-            this.btnConfiguraciones.Text = "        Configuraciones";
-            this.btnConfiguraciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguraciones.UseVisualStyleBackColor = true;
-            this.btnConfiguraciones.Click += new System.EventHandler(this.btnConfiguraciones_Click);
-            // 
-            // pnlConfiguraciones
-            // 
-            this.pnlConfiguraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(90)))));
-            this.pnlConfiguraciones.Controls.Add(this.btnChoferes);
-            this.pnlConfiguraciones.Controls.Add(this.btnAutobuses);
-            this.pnlConfiguraciones.Controls.Add(this.btnRutas);
-            this.pnlConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlConfiguraciones.Location = new System.Drawing.Point(0, 228);
-            this.pnlConfiguraciones.Name = "pnlConfiguraciones";
-            this.pnlConfiguraciones.Size = new System.Drawing.Size(184, 116);
-            this.pnlConfiguraciones.TabIndex = 5;
-            this.pnlConfiguraciones.Visible = false;
-            // 
             // FrmPrinpal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(762, 588);
+            this.ClientSize = new System.Drawing.Size(806, 588);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlControlador);
@@ -323,12 +323,12 @@
             this.pnlControlador.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            this.pnlConfiguraciones.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
             this.pnlContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlConfiguraciones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

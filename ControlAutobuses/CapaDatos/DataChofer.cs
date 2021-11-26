@@ -60,6 +60,32 @@ namespace CapaDatos
             return choferes;
         }
 
+        public IList<Chofer> FindAvailable()
+        {
+            this.SqlDataReader = this.SqlQuery("SP_CHOFERES_DISPONIBLES");
+
+            IList<Chofer> choferes = new List<Chofer>();
+            Chofer chofer;
+            while (this.SqlDataReader.Read())
+            {
+                chofer = new Chofer();
+                chofer.Id = this.SqlDataReader.GetString(0);
+                chofer.Codigo = this.SqlDataReader.GetString(1);
+                chofer.Nombre = this.SqlDataReader.GetString(2);
+                chofer.Apellido = this.SqlDataReader.GetString(3);
+                chofer.BirthDay = this.SqlDataReader.GetDateTime(4);
+                chofer.Cedula = this.SqlDataReader.GetString(5);
+                chofer.AutobusId = null;
+                chofer.RutaId = null;
+
+                choferes.Add(chofer);
+            }
+
+            this.sqlConnection.Close();
+            this.SqlDataReader.Close();
+            return choferes;
+        }
+
         public Chofer FindById(string id)
         {
             IList<SqlParameter> parameters = new List<SqlParameter>();

@@ -48,6 +48,28 @@ namespace CapaDatos
             return rutas;
         }
 
+        public IList<Ruta> FindAvailable()
+        {
+            this.SqlDataReader = this.SqlQuery("SP_RUTAS_DISPONIBLES");
+
+            IList<Ruta> rutas = new List<Ruta>();
+            while (this.SqlDataReader.Read())
+            {
+                rutas.Add(new Ruta
+                {
+                    Id = this.SqlDataReader.GetString(0),
+                    Codigo = this.SqlDataReader.GetString(1),
+                    Nombre = this.SqlDataReader.GetString(2),
+                    Descripcion = this.SqlDataReader.GetString(3),
+                    Asignado = this.SqlDataReader.GetBoolean(4)
+                });
+            }
+
+            this.sqlConnection.Close();
+            this.SqlDataReader.Close();
+            return rutas;
+        }
+
         public Ruta FindById(string id)
         {
             IList<SqlParameter> parameters = new List<SqlParameter>();

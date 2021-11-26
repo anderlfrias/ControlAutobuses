@@ -52,6 +52,12 @@ namespace CapaNegocio
             return result;
         }
 
+        public IList<Autobus> GetAvailable()
+        {
+            var result = _dataAutobus.FindAvailable();
+            return result;
+        }
+
         public Autobus GetById(string id)
         {
             var result = _dataAutobus.FindById(id);

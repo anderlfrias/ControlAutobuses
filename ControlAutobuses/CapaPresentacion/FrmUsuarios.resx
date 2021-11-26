@@ -118,18 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnAgregarViaje.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QsJEhwP6e9p2AAAAUtJREFU
-        SEvt1b1Lw0AcxvEUHB27aMeCVdCpQxcVJzu5uIiT4ORkwcnVyRfERXRwUqoIrv4Z4q6CqziI4Ci+xO+T
-        u9P2bJNL5zzwoUfy5H7QhmtUZODEcTyESxyghkfPGHRP63uco2Ifzw7lQyhtTJllVyahTTtzi5Ldon8o
-        rSV1kzwDlKrdpncozOA9qZrkHVC3W/0PN8t4SWp/0SYTePWM4wJ+UgfUTacrdxi2ld/oGh5U8JJ7gPIG
-        /y3StV4ZaECeFAMyEzzgCfPQtTRNPMMleMAR9P5fZVDnGC7BA3SQzZll/NHx+Y0vfNq1Ouq6BA/Yhx6+
-        xixOsIQttKDzagfqqOuSOqBqOkl2oYfdWbQH/SYbWMEyNqGOui79DztulqAjV9lG6AB1lRukH9cURnGG
-        dTTg/nC02TRWsYgF6GtSR91TjNhtioQmin4AXExvnPIbsscAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnCerrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -238,10 +226,4 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="sPCHOFERESDISPONIBLESBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>29</value>
-  </metadata>
 </root>

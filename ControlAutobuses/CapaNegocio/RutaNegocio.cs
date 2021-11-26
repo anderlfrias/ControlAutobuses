@@ -48,6 +48,12 @@ namespace CapaNegocio
             return result;
         }
 
+        public IList<Ruta> GetAvailable()
+        {
+            var result = _dataRuta.FindAvailable();
+            return result;
+        }
+
         public Ruta GetById(string id)
         {
             var result = _dataRuta.FindById(id);

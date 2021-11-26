@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,11 +43,13 @@
             this.cboAutobuses = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.sPCHOFERESDISPONIBLESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgViajes)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPCHOFERESDISPONIBLESBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,7 +98,6 @@
             this.dtgViajes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgViajes.ColumnHeadersHeight = 25;
             this.dtgViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dtgViajes.ColumnHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,6 +130,7 @@
             this.groupBox1.Controls.Add(this.cboChoferes);
             this.groupBox1.Controls.Add(this.cboAutobuses);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(598, 121);
@@ -153,36 +156,42 @@
             // 
             // cboRutas
             // 
+            this.cboRutas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboRutas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboRutas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cboRutas.FormattingEnabled = true;
             this.cboRutas.Location = new System.Drawing.Point(14, 75);
             this.cboRutas.Name = "cboRutas";
             this.cboRutas.Size = new System.Drawing.Size(249, 29);
             this.cboRutas.TabIndex = 10;
-            this.cboRutas.Text = "Rutas disponibles...";
+            this.cboRutas.SelectedIndexChanged += new System.EventHandler(this.cboRutas_SelectedIndexChanged);
             // 
             // cboChoferes
             // 
+            this.cboChoferes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboChoferes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboChoferes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboChoferes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cboChoferes.FormattingEnabled = true;
             this.cboChoferes.Location = new System.Drawing.Point(320, 26);
             this.cboChoferes.Name = "cboChoferes";
             this.cboChoferes.Size = new System.Drawing.Size(249, 29);
             this.cboChoferes.TabIndex = 9;
-            this.cboChoferes.Text = "Choferes disponibles...";
+            this.cboChoferes.SelectedIndexChanged += new System.EventHandler(this.cboChoferes_SelectedIndexChanged);
             // 
             // cboAutobuses
             // 
+            this.cboAutobuses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAutobuses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboAutobuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboAutobuses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cboAutobuses.FormattingEnabled = true;
             this.cboAutobuses.Location = new System.Drawing.Point(14, 26);
             this.cboAutobuses.Name = "cboAutobuses";
             this.cboAutobuses.Size = new System.Drawing.Size(249, 29);
             this.cboAutobuses.TabIndex = 8;
-            this.cboAutobuses.Text = "Autobuses disponibles...";
+            this.cboAutobuses.SelectedIndexChanged += new System.EventHandler(this.cboAutobuses_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -208,10 +217,13 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // sPCHOFERESDISPONIBLESBindingSource
+            // 
+            this.sPCHOFERESDISPONIBLESBindingSource.DataMember = "SP_CHOFERES_DISPONIBLES";
+            // 
             // FrmInformes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(622, 556);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -223,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgViajes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPCHOFERESDISPONIBLESBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,5 +252,9 @@
         private System.Windows.Forms.ComboBox cboChoferes;
         private System.Windows.Forms.ComboBox cboAutobuses;
         private System.Windows.Forms.DataGridView dtgViajes;
+        //private ControlAutobusesDataSetTableAdapters.SP_AUTOBUSES_DISPONIBLESTableAdapter sP_AUTOBUSES_DISPONIBLESTableAdapter;
+        ///private ControlAutobusesDataSet1 controlAutobusesDataSet1;
+        private System.Windows.Forms.BindingSource sPCHOFERESDISPONIBLESBindingSource;
+        //private ControlAutobusesDataSet1TableAdapters.SP_CHOFERES_DISPONIBLESTableAdapter sP_CHOFERES_DISPONIBLESTableAdapter;
     }
 }

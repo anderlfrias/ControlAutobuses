@@ -240,8 +240,8 @@ CREATE PROCEDURE SP_CHOFERES_DISPONIBLES
 AS
 	SELECT *
 	FROM Choferes
-	WHERE RutaId = NULL
-		OR AutobusId = NULL
+	WHERE RutaId IS NULL
+		OR AutobusId IS NULL
 
 GO
 
@@ -310,13 +310,21 @@ AS
 
 GO
 
+--STORE PROCEDURE PARA MOSTRAR INFORMES DE VIAJES
+CREATE PROCEDURE SP_MOSTRAR_INFORMES
+AS
+	SELECT c.Id AS ChoferId, a.Id AS AutobusId, r.Id AS RutaId, CONCAT(c.Nombre,' ', c.Apellido) AS Chofer, c.Cedula, CONCAT(a.Marca,' ', a.Modelo) AS Autobus, a.Placa, r.Nombre AS Ruta
+	FROM Choferes c
+	INNER JOIN Autobuses a ON a.Id = c.AutobusId
+	INNER JOIN Rutas r ON r.Id = c.RutaId;
 
+GO
 --INSERTS DE PRUEBA
 INSERT INTO Autobuses (Id, Marca, Modelo, Placa, Color, Anioo, Asignado)
 	   VALUES ('1234', 'Toyota', 'Camry', 'A010203', 'Blanco', 2015, 0);
 
 INSERT INTO Rutas (Id, Nombre, Descripcion, Asingnado)
-		VALUES ('1234', 'Charles', 'Ruta desde villa mella hasta el puente Juan Carlos', 0);
+		VALUES ('74185296', 'Charles', 'Ruta desde villa mella hasta el puente Juan Carlos', 0);
 
 INSERT INTO Choferes (Id, Nombre, Apellido, BirthDate, Cedula, AutobusId, RutaId)
 	VALUES ('1234', 'Anderson', 'Frias', '03-16-2001', '40219174808', NULL, NULL);
@@ -355,3 +363,23 @@ INNER JOIN Roles r ON r.Id = u.RoleId;
 SELECT * 
 FROM Roles
 WHERE Nombre = 'user';
+
+
+SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.Nombre AS Role 
+FROM Usuarios u
+INNER JOIN Roles r ON r.Id = u.RoleId;
+
+SELECT c.Id AS ChoferId, a.Id AS AutobusId, r.Id AS RutaId, CONCAT(c.Nombre,' ', c.Apellido) AS Chofer, c.Cedula, CONCAT(a.Marca,' ', a.Modelo) AS Autobus, a.Placa, r.Nombre AS Ruta
+FROM Choferes c
+INNER JOIN Autobuses a ON a.Id = c.AutobusId
+INNER JOIN Rutas r ON r.Id = c.RutaId;
+
+SELECT *
+FROM Choferes
+WHERE RutaId IS NULL
+		OR AutobusId IS NULL
+
+UPDATE Choferes
+SET AutobusId = null,
+	RutaId = null
+WHERE Id = '1234'

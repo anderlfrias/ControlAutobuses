@@ -49,6 +49,12 @@ namespace CapaNegocio
             return result;
         }
 
+        public IList<Chofer> GetAvailable()
+        {
+            var result = _dataChofer.FindAvailable();
+            return result;
+        }
+
         public Chofer GetById(string id)
         {
             var result = _dataChofer.FindById(id);

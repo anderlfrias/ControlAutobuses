@@ -58,6 +58,31 @@ namespace CapaDatos
             return autobuses;
         }
 
+        public IList<Autobus> FindAvailable()
+        {
+            this.SqlDataReader = this.SqlQuery("SP_AUTOBUSES_DISPONIBLES");
+
+            IList<Autobus> autobuses = new List<Autobus>();
+            while (this.SqlDataReader.Read())
+            {
+                autobuses.Add(new Autobus
+                {
+                    Id = this.SqlDataReader.GetString(0),
+                    Codigo = this.SqlDataReader.GetString(1),
+                    Marca = this.SqlDataReader.GetString(2),
+                    Modelo = this.SqlDataReader.GetString(3),
+                    Placa = this.SqlDataReader.GetString(4),
+                    Color = this.SqlDataReader.GetString(5),
+                    Anio = this.SqlDataReader.GetInt16(6),
+                    Asignado = this.SqlDataReader.GetBoolean(7)
+                });
+            }
+
+            this.sqlConnection.Close();
+            this.SqlDataReader.Close();
+            return autobuses;
+        }
+
         public Autobus FindById(string id)
         {
             IList<SqlParameter> parameters = new List<SqlParameter>();
