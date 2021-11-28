@@ -57,19 +57,27 @@ namespace CapaPresentacion
             dtgViajes.Columns[0].Visible = false;
             dtgViajes.Columns[1].Visible = false;
             dtgViajes.Columns[2].Visible = false;
+
+            dtgViajes.Columns[3].Width = 125;
+            dtgViajes.Columns[4].Width = 110;
+            dtgViajes.Columns[5].Width = 150;
+            dtgViajes.Columns[6].Width = 115;
+            dtgViajes.Columns[7].Width = 95;
+
             dtgViajes.ClearSelection();
         }
 
 
         private void DisplayChoferes()
         {
+            cboChoferes.Items.Clear();
             _Choferes = new List<DisplayChoferes>();
             var choferes = _choferNegocio.GetAvailable();
             cboChoferes.Items.Add("Choferes disponibles...");
             foreach (var item in choferes)
             {
-                cboChoferes.Items.Add(item.Nombre);
-                cboChoferes.SelectedItem = item.Nombre;
+                cboChoferes.Items.Add($"{item.Nombre} {item.Apellido}  -  {item.Codigo}");
+                cboChoferes.SelectedItem = $"{item.Nombre} {item.Apellido}  -  {item.Codigo}";
                 _Choferes.Add(new DisplayChoferes
                 {
                     Index = cboChoferes.SelectedIndex,
@@ -81,6 +89,7 @@ namespace CapaPresentacion
 
         private void DisplayAutobuses()
         {
+            cboAutobuses.Items.Clear();
             _Autobuses = new List<DisplayAutobuses>();
             var autobuses = _autobusNegocio.GetAvailable();
             cboAutobuses.Items.Add("Autobuses disponibles...");
@@ -99,6 +108,7 @@ namespace CapaPresentacion
 
         private void DisplayRutas()
         {
+            cboRutas.Items.Clear();
             _Rutas = new List<DisplayRutas>();
             var rutas = _rutaNegocio.GetAvailable();
             cboRutas.Items.Add("Rutas disponibles...");
@@ -115,52 +125,55 @@ namespace CapaPresentacion
             cboRutas.SelectedIndex = 0;
         }
 
-
-        //private Chofer CargarChofer(string id)
-        //{
-        //    return _choferNegocio.GetById(id);
-        //}
-
-        //private Autobus CargarAutobus(string id)
-        //{
-        //    return _autobusNegocio.GetById(id);
-        //}
-
-        //private Ruta CargarRuta(string id)
-        //{
-        //    return _rutaNegocio.GetById(id);
-        //}
         
-        private string ModificarAutobus(Autobus model)
+        private bool ModificarAutobus(string id)
         {
-            return _autobusNegocio.Update(model);
+            var autobus = _autobusNegocio.GetById(id);
+
+            autobus.Asignado = true;
+            
+            var result = _autobusNegocio.Update(autobus);
+
+            if (result == "Operacion exitosa")
+                return true;
+            else
+                return false;
         }
 
-        private string ModificarChofer(Chofer model)
+        private bool ModificarChofer(string idChofer, string idAutobus, string idRuta)
         {
-            return _choferNegocio.Update(model);
+            var result = _choferNegocio.Assign(idChofer, idAutobus, idRuta);
+
+            if (result == "Asignacion correcta")
+                return true;
+            else
+                return false;
         }
 
-        private string ModificarRuta(Ruta model)
+        private bool ModificarRuta(string id)
         {
-            return _rutaNegocio.Update(model);
+            var ruta = _rutaNegocio.GetById(id);
+
+            ruta.Asignado = true;
+            var result = _rutaNegocio.Update(ruta);
+
+            if (result == "Operacion exitosa")
+                return true;
+            else
+                return false;
         }
 
         private void AgregarViaje()
         {
-            var chofer = _choferNegocio.GetById(_idChofer);
-            var autobus = _autobusNegocio.GetById(_idAutobus);
-            var ruta = _rutaNegocio.GetById(_idRuta);
-
-            chofer.AutobusId = _idAutobus;
-            chofer.RutaId = _idRuta;
-            MessageBox.Show(_choferNegocio.Update(chofer), "Information");
-
-            autobus.Asignado = false;
-            MessageBox.Show(_autobusNegocio.Update(autobus), "Information");
-
-            ruta.Asignado = false;
-            MessageBox.Show(_rutaNegocio.Update(ruta), "Information");
+            if (!ModificarChofer(_idChofer, _idAutobus, _idRuta))
+                MessageBox.Show("Error al intentar vincular el chofer", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (!ModificarAutobus(_idAutobus))
+                MessageBox.Show("Error al intentar vincular el autobus", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (!ModificarRuta(_idRuta))
+                MessageBox.Show("Error al intentar vincular la ruta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("Asignacion exitosa", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            FirstActions();
         }
 
         //Eventos
@@ -214,6 +227,18 @@ namespace CapaPresentacion
                     }
                 }
             }
+        }
+
+        private void btnAgregarViaje_Click(object sender, EventArgs e)
+        {
+            if (cboChoferes.SelectedIndex == 0)
+                MessageBox.Show("Seleccion invalida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (cboAutobuses.SelectedIndex == 0)
+                MessageBox.Show("Seleccion invalida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (cboRutas.SelectedIndex == 0)
+                MessageBox.Show("Seleccion invalida", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+                AgregarViaje();
         }
     }
 

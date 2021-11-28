@@ -131,5 +131,16 @@ namespace CapaDatos
             this.SqlDataReader = this.SqlQuery("SP_ELIMINAR_CHOFER", parameters);
             this.sqlConnection.Close();
         }
+
+        public void Vincular(string id, string idAutobus, string idRuta)
+        {
+            IList<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@Id", id));
+            parameters.Add(new SqlParameter("@IdAutobus", idAutobus));
+            parameters.Add(new SqlParameter("@IdRuta", idRuta));
+
+            this.SqlDataReader = this.SqlQuery("SP_VINCULAR_CHOFER", parameters);
+            this.sqlConnection.Close();
+        }
     }
 }
