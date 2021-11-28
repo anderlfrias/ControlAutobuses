@@ -138,5 +138,10 @@ namespace CapaPresentacion
         {
             OpenForm(new FrmInformes());
         }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FrmUsuarios());
+        }
     }
 }

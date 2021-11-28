@@ -46,6 +46,7 @@
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnUsers = new System.Windows.Forms.Button();
             this.pnlControlador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.pnlMenu.SuspendLayout();
@@ -118,7 +119,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(0, 338);
+            this.btnSalir.Location = new System.Drawing.Point(0, 380);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(184, 38);
             this.btnSalir.TabIndex = 6;
@@ -129,13 +130,14 @@
             // pnlConfiguraciones
             // 
             this.pnlConfiguraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(90)))));
+            this.pnlConfiguraciones.Controls.Add(this.btnUsers);
             this.pnlConfiguraciones.Controls.Add(this.btnChoferes);
             this.pnlConfiguraciones.Controls.Add(this.btnAutobuses);
             this.pnlConfiguraciones.Controls.Add(this.btnRutas);
             this.pnlConfiguraciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlConfiguraciones.Location = new System.Drawing.Point(0, 228);
             this.pnlConfiguraciones.Name = "pnlConfiguraciones";
-            this.pnlConfiguraciones.Size = new System.Drawing.Size(184, 110);
+            this.pnlConfiguraciones.Size = new System.Drawing.Size(184, 152);
             this.pnlConfiguraciones.TabIndex = 5;
             this.pnlConfiguraciones.Visible = false;
             // 
@@ -305,6 +307,25 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnUsers
+            // 
+            this.btnUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(0, 114);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(184, 38);
+            this.btnUsers.TabIndex = 6;
+            this.btnUsers.Text = "        Usuarios";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
             // FrmPrinpal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,6 +373,7 @@
         private System.Windows.Forms.Panel pnlConfiguraciones;
         private System.Windows.Forms.Button btnConfiguraciones;
         private System.Windows.Forms.Button btnInformes;
+        private System.Windows.Forms.Button btnUsers;
     }
 }
 

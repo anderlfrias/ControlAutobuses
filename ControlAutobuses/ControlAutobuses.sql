@@ -301,6 +301,15 @@ AS
 	WHERE u.Usuario = @Usuario;
 
 GO
+
+CREATE PROCEDURE SP_SHOW_USERS
+AS
+	SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.Nombre AS Role 
+	FROM Usuarios u
+	INNER JOIN Roles r ON r.Id = u.RoleId
+
+GO
+
 CREATE PROCEDURE SP_FIND_USER_BY_ID
 	@Usuario NVARCHAR(12)
 AS
@@ -342,3 +351,10 @@ INSERT INTO Roles(Id, Nombre, NombreNormal)
 
 INSERT INTO Usuarios(Id, Nombre, Usuario, Password, RoleId)
 	VALUES ('C144EB70-4FAE-4CC2-AC9F-43A404D75F14', 'ADMINISTRADOR', 'admin', 'MQAyADMANAA=', '71B7F713-A148-4752-A750-CD3C04D9FB07');
+
+--Selects
+SELECT * FROM Usuarios;
+SELECT * FROM Roles;
+SELECT * FROM Choferes;
+SELECT * FROM Rutas;
+SELECT * FROM Autobuses;

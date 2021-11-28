@@ -75,5 +75,39 @@ namespace CapaDatos
             this.SqlDataReader.Close();
             return user;
         }
+
+        public void ChangeRole(string id, string idRole)
+        {
+            IList<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@Id", id));
+            parameters.Add(new SqlParameter("@RoleId", idRole));
+
+            this.SqlDataReader = this.SqlQuery("SP_CHANGE_USER_ROLE", parameters);
+
+            this.sqlConnection.Close();
+        }
+
+        public IList<User> ShowUsers()
+        {
+            this.SqlDataReader = this.SqlQuery("SP_SHOW_USERS");
+
+            IList<User> users = new List<User>();
+
+            while (this.SqlDataReader.Read())
+            {
+                users.Add(new User
+                {
+                    Id = this.SqlDataReader.GetString(0),
+                    Codigo = this.SqlDataReader.GetString(1),
+                    Nombre = this.SqlDataReader.GetString(2),
+                    Usuario = this.SqlDataReader.GetString(3),
+                    Role = this.SqlDataReader.GetString(5)
+                });
+            }
+
+            this.SqlDataReader.Close();
+            this.sqlConnection.Close();
+            return users;
+        }
     }
 }

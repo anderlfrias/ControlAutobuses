@@ -55,5 +55,35 @@ namespace CapaNegocio
 
             return message;
         }
+
+        private string ChangeRole(string id, string idRole)
+        {
+            if((string.IsNullOrEmpty(id)) || (string.IsNullOrEmpty(idRole)))
+            {
+                message = "Id no proporcionado";
+            }
+            else
+            {
+                try
+                {
+                    _dataUser.ChangeRole(id, idRole);
+                    message = "Operacion exitosa";
+                }
+                catch (Exception ex)
+                {
+                    if (ex.InnerException != null)
+                        message = ex.InnerException.Message;
+                    else
+                        message = ex.Message;
+                }
+            }
+
+            return message;
+        }
+
+        public IList<User> DisplayUsers()
+        {
+            return _dataUser.ShowUsers();
+        }
     }
 }
