@@ -290,6 +290,7 @@ AS
 	SET RoleId = @RoleId
 	WHERE Id = @Id;
 
+GO
 --STORE PROCEDURE PARA VERIFICAR USUARIO
 CREATE PROCEDURE SP_FIND_USER_BY_USERNAME
 	@Usuario NVARCHAR(12)
@@ -310,9 +311,16 @@ AS
 
 GO
 
---STORE PROCEDURE PARA AGREGARLE UNA RUTA Y UN AUTOBUS A UN  CHOFER
+--STORE PROCEDURE PARA AGREGAR NUEVAS ASIGNACIONES
 CREATE PROCEDURE SP_VINCULAR_CHOFER
-
+	@Id NVARCHAR(255),
+	@IdAutobus NVARCHAR(255),
+	@IdRuta NVARCHAR(255)
+AS
+	UPDATE Choferes SET AutobusId = @IdAutobus, RutaId = @IdRuta
+	WHERE Id = @Id;
+	
+GO
 --STORE PROCEDURE PARA MOSTRAR INFORMES DE VIAJES
 CREATE PROCEDURE SP_MOSTRAR_INFORMES
 AS
@@ -323,21 +331,6 @@ AS
 
 GO
 --INSERTS DE PRUEBA
-INSERT INTO Autobuses (Id, Marca, Modelo, Placa, Color, Anioo, Asignado)
-	   VALUES ('1234', 'Toyota', 'Camry', 'A010203', 'Blanco', 2015, 0);
-
-INSERT INTO Rutas (Id, Nombre, Descripcion, Asingnado)
-		VALUES ('74185296', 'Charles', 'Ruta desde villa mella hasta el puente Juan Carlos', 0);
-
-INSERT INTO Choferes (Id, Nombre, Apellido, BirthDate, Cedula, AutobusId, RutaId)
-	VALUES ('1234', 'Anderson', 'Frias', '03-16-2001', '40219174808', NULL, NULL);
-
-INSERT INTO Choferes (Id, Nombre, Apellido, BirthDate, Cedula, AutobusId, RutaId)
-	VALUES ('1235', 'Leonel', 'Acosta', '03-16-2001', '40219174807', NULL, NULL);
-
-INSERT INTO Choferes (Id, Nombre, Apellido, BirthDate, Cedula)
-	VALUES ('123YU8U', 'Leonel', 'Acosta', '03-16-2001', '40219174809');
-
 INSERT INTO Roles(Id, Nombre, NombreNormal)
 	VALUES ('71B7F713-A148-4752-A750-CD3C04D9FB07', 'admin', 'Administrador');
 
@@ -349,40 +342,3 @@ INSERT INTO Roles(Id, Nombre, NombreNormal)
 
 INSERT INTO Usuarios(Id, Nombre, Usuario, Password, RoleId)
 	VALUES ('C144EB70-4FAE-4CC2-AC9F-43A404D75F14', 'ADMINISTRADOR', 'admin', 'MQAyADMANAA=', '71B7F713-A148-4752-A750-CD3C04D9FB07');
-
-
-GO
---Selects
-SELECT * FROM Autobuses;
-SELECT * FROM Rutas;
-SELECT * FROM Choferes;
-SELECT * FROM Roles;
-SELECT * FROM Usuarios;
-
-SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.Nombre AS Role 
-FROM Usuarios u
-INNER JOIN Roles r ON r.Id = u.RoleId;
-
-SELECT * 
-FROM Roles
-WHERE Nombre = 'user';
-
-
-SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.Nombre AS Role 
-FROM Usuarios u
-INNER JOIN Roles r ON r.Id = u.RoleId;
-
-SELECT c.Id AS ChoferId, a.Id AS AutobusId, r.Id AS RutaId, CONCAT(c.Nombre,' ', c.Apellido) AS Chofer, c.Cedula, CONCAT(a.Marca,' ', a.Modelo) AS Autobus, a.Placa, r.Nombre AS Ruta
-FROM Choferes c
-INNER JOIN Autobuses a ON a.Id = c.AutobusId
-INNER JOIN Rutas r ON r.Id = c.RutaId;
-
-SELECT *
-FROM Choferes
-WHERE RutaId IS NULL
-		OR AutobusId IS NULL
-
-UPDATE Choferes
-SET AutobusId = null,
-	RutaId = null
-WHERE Id = '1234'
