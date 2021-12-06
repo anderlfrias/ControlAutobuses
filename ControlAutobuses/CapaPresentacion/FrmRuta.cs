@@ -44,9 +44,13 @@ namespace CapaPresentacion
         {
             dgvRutas.Columns[0].Visible = false;
             dgvRutas.Columns[1].Width = 90;
-            dgvRutas.Columns[2].Width = 95;
-            dgvRutas.Columns[3].Width = 320;
+            dgvRutas.Columns[2].Width = 105;
+            dgvRutas.Columns[3].Width = 305;
             dgvRutas.Columns[4].Width = 70;
+
+            dgvRutas.AllowUserToResizeColumns = false;
+            dgvRutas.AllowUserToResizeRows = false;
+
             dgvRutas.ClearSelection();
         }
 

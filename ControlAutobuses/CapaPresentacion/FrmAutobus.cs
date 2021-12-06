@@ -36,13 +36,17 @@ namespace CapaPresentacion
         private void VisibilidadTabla()
         {
             dgvAutobuses.Columns[0].Visible = false;
-            dgvAutobuses.Columns[1].Width = 80;
+            dgvAutobuses.Columns[1].Width = 83;
             dgvAutobuses.Columns[2].Width = 80;
             dgvAutobuses.Columns[3].Width = 95;
             dgvAutobuses.Columns[4].Width = 90;
             dgvAutobuses.Columns[5].Width = 75;
             dgvAutobuses.Columns[6].Width = 60;
             dgvAutobuses.Columns[7].Width = 82;
+
+            dgvAutobuses.AllowUserToResizeRows = false;
+            dgvAutobuses.AllowUserToResizeColumns = true;
+
             dgvAutobuses.ClearSelection();
         }
 

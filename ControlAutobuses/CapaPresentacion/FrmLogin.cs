@@ -127,6 +127,8 @@ namespace CapaPresentacion
                     else
                     {
                         MessageBox.Show("Contraseña Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TxtPass.Clear();
+                        TxtPass.Focus();
                     }
                 }
                 else

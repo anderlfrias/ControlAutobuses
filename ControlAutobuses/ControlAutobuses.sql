@@ -304,7 +304,7 @@ GO
 
 CREATE PROCEDURE SP_SHOW_USERS
 AS
-	SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.Nombre AS Role 
+	SELECT u.Id, u.Codigo, u.Nombre, u.Usuario, u.Password, r.NombreNormal AS Role 
 	FROM Usuarios u
 	INNER JOIN Roles r ON r.Id = u.RoleId
 

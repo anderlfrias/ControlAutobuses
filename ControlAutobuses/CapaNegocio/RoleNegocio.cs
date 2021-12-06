@@ -17,6 +17,12 @@ namespace CapaNegocio
             _dataRole = new DataRole();
         }
 
+        public IList<Role> Get()
+        {
+            var result = _dataRole.Find();
+            return result;
+        }
+
         public Role GetByRoleName(string name)
         {
             var result = _dataRole.FindByRoleName(name);

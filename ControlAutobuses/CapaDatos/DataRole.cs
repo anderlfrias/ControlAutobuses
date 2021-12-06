@@ -10,6 +10,27 @@ namespace CapaDatos
 {
     public class DataRole : Conexion
     {
+        public IList<Role> Find()
+        {
+            this.SqlDataReader = this.SqlQuery("SP_GET_ROLES");
+
+            IList<Role> roles = new List<Role>();
+            while (this.SqlDataReader.Read())
+            {
+                roles.Add(new Role
+                {
+                    Id = this.SqlDataReader.GetString(0),
+                    Codigo = this.SqlDataReader.GetString(1),
+                    Nombre = this.SqlDataReader.GetString(2),
+                    NombreNormal = this.SqlDataReader.GetString(3)
+                });
+            }
+
+            this.sqlConnection.Close();
+            this.SqlDataReader.Close();
+            return roles;
+        }
+
         public Role FindByRoleName(string name)
         {
             try

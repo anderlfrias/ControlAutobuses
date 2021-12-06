@@ -35,6 +35,7 @@
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pnlConfiguraciones = new System.Windows.Forms.Panel();
+            this.btnUsers = new System.Windows.Forms.Button();
             this.btnChoferes = new System.Windows.Forms.Button();
             this.btnAutobuses = new System.Windows.Forms.Button();
             this.btnRutas = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnUsers = new System.Windows.Forms.Button();
             this.pnlControlador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.pnlMenu.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             // pnlControlador
             // 
-            this.pnlControlador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(136)))));
+            this.pnlControlador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
             this.pnlControlador.Controls.Add(this.label1);
             this.pnlControlador.Controls.Add(this.btnClose);
             this.pnlControlador.Dock = System.Windows.Forms.DockStyle.Top;
@@ -95,7 +95,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(136)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
             this.pnlMenu.Controls.Add(this.btnSalir);
             this.pnlMenu.Controls.Add(this.pnlConfiguraciones);
             this.pnlMenu.Controls.Add(this.btnConfiguraciones);
@@ -126,10 +126,11 @@
             this.btnSalir.Text = "        Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pnlConfiguraciones
             // 
-            this.pnlConfiguraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(90)))));
+            this.pnlConfiguraciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(43)))), ((int)(((byte)(88)))));
             this.pnlConfiguraciones.Controls.Add(this.btnUsers);
             this.pnlConfiguraciones.Controls.Add(this.btnChoferes);
             this.pnlConfiguraciones.Controls.Add(this.btnAutobuses);
@@ -140,6 +141,25 @@
             this.pnlConfiguraciones.Size = new System.Drawing.Size(184, 152);
             this.pnlConfiguraciones.TabIndex = 5;
             this.pnlConfiguraciones.Visible = false;
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsers.FlatAppearance.BorderSize = 0;
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.Location = new System.Drawing.Point(0, 114);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(184, 38);
+            this.btnUsers.TabIndex = 6;
+            this.btnUsers.Text = "        Usuarios";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnChoferes
             // 
@@ -267,7 +287,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(27, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(43, 18);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(87, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -284,14 +304,14 @@
             this.pnlContenedor.Location = new System.Drawing.Point(184, 32);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(622, 556);
-            this.pnlContenedor.TabIndex = 2;
+            this.pnlContenedor.TabIndex = 3;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(136)))));
-            this.lblTitulo.Location = new System.Drawing.Point(123, 327);
+            this.lblTitulo.Location = new System.Drawing.Point(126, 336);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(422, 40);
             this.lblTitulo.TabIndex = 1;
@@ -300,31 +320,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(201, 114);
+            this.pictureBox1.Location = new System.Drawing.Point(208, 114);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(238, 210);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 210);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsers.FlatAppearance.BorderSize = 0;
-            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
-            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(0, 114);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(184, 38);
-            this.btnUsers.TabIndex = 6;
-            this.btnUsers.Text = "        Usuarios";
-            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // FrmPrinpal
             // 
@@ -365,15 +366,15 @@
         private System.Windows.Forms.Button btnAutobuses;
         private System.Windows.Forms.Button btnChoferes;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlConfiguraciones;
         private System.Windows.Forms.Button btnConfiguraciones;
         private System.Windows.Forms.Button btnInformes;
         private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Panel pnlContenedor;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

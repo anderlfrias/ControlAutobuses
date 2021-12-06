@@ -61,7 +61,7 @@ namespace CapaPresentacion
             dtgViajes.Columns[3].Width = 125;
             dtgViajes.Columns[4].Width = 110;
             dtgViajes.Columns[5].Width = 150;
-            dtgViajes.Columns[6].Width = 115;
+            dtgViajes.Columns[6].Width = 110;
             dtgViajes.Columns[7].Width = 95;
 
             dtgViajes.ClearSelection();
@@ -181,7 +181,6 @@ namespace CapaPresentacion
         {
             this.Close();
         }
-
 
         private void cboAutobuses_SelectedIndexChanged(object sender, EventArgs e)
         {

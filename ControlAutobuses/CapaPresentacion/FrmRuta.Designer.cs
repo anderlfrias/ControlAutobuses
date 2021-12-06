@@ -139,9 +139,9 @@
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.groupBox1.Location = new System.Drawing.Point(11, 88);
+            this.groupBox1.Location = new System.Drawing.Point(11, 71);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 173);
+            this.groupBox1.Size = new System.Drawing.Size(373, 170);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de las rutas";
@@ -165,7 +165,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(23, 107);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(302, 45);
+            this.txtDescripcion.Size = new System.Drawing.Size(302, 44);
             this.txtDescripcion.TabIndex = 32;
             // 
             // pictureBox1
@@ -173,7 +173,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(16, 100);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 61);
+            this.pictureBox1.Size = new System.Drawing.Size(321, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
@@ -249,7 +249,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(440, 220);
+            this.btnEliminar.Location = new System.Drawing.Point(450, 198);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(126, 33);
             this.btnEliminar.TabIndex = 32;
@@ -266,7 +266,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(440, 181);
+            this.btnGuardar.Location = new System.Drawing.Point(450, 159);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(126, 33);
             this.btnGuardar.TabIndex = 31;
@@ -283,7 +283,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(440, 142);
+            this.btnEditar.Location = new System.Drawing.Point(450, 120);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(126, 33);
             this.btnEditar.TabIndex = 30;
@@ -300,7 +300,7 @@
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(440, 103);
+            this.btnNuevo.Location = new System.Drawing.Point(450, 81);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(126, 33);
             this.btnNuevo.TabIndex = 29;
@@ -310,17 +310,14 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.dgvRutas);
-            this.groupBox2.Location = new System.Drawing.Point(11, 267);
+            this.groupBox2.Location = new System.Drawing.Point(11, 247);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(555, 282);
+            this.groupBox2.Size = new System.Drawing.Size(608, 307);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             // 
@@ -329,7 +326,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(453, 19);
+            this.label11.Location = new System.Drawing.Point(500, 27);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(92, 21);
             this.label11.TabIndex = 22;
@@ -340,7 +337,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(195, 19);
+            this.label8.Location = new System.Drawing.Point(213, 27);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 21);
             this.label8.TabIndex = 19;
@@ -351,7 +348,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(94, 19);
+            this.label7.Location = new System.Drawing.Point(97, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 21);
             this.label7.TabIndex = 18;
@@ -362,7 +359,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(11, 19);
+            this.label6.Location = new System.Drawing.Point(14, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 21);
             this.label6.TabIndex = 17;
@@ -398,7 +395,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRutas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRutas.Location = new System.Drawing.Point(6, 41);
+            this.dgvRutas.Location = new System.Drawing.Point(6, 51);
             this.dgvRutas.Name = "dgvRutas";
             this.dgvRutas.ReadOnly = true;
             this.dgvRutas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -412,14 +409,14 @@
             this.dgvRutas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRutas.RowTemplate.Height = 35;
             this.dgvRutas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRutas.Size = new System.Drawing.Size(543, 235);
+            this.dgvRutas.Size = new System.Drawing.Size(596, 250);
             this.dgvRutas.TabIndex = 16;
             // 
             // FrmRuta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(578, 556);
+            this.ClientSize = new System.Drawing.Size(622, 556);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);

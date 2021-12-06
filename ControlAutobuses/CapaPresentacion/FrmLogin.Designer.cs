@@ -32,6 +32,7 @@
             this.pnlFondo = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LnkRegistro = new System.Windows.Forms.LinkLabel();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.TxtPass = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.LnkRegistro = new System.Windows.Forms.LinkLabel();
             this.pnlFondo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panel1.SuspendLayout();
@@ -91,6 +91,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 335);
             this.panel1.TabIndex = 0;
+            // 
+            // LnkRegistro
+            // 
+            this.LnkRegistro.AutoSize = true;
+            this.LnkRegistro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnkRegistro.Location = new System.Drawing.Point(138, 280);
+            this.LnkRegistro.Name = "LnkRegistro";
+            this.LnkRegistro.Size = new System.Drawing.Size(71, 17);
+            this.LnkRegistro.TabIndex = 9;
+            this.LnkRegistro.TabStop = true;
+            this.LnkRegistro.Text = "Registrate!";
+            this.LnkRegistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkRegistro_LinkClicked);
             // 
             // BtnSalir
             // 
@@ -197,18 +209,6 @@
             this.label1.Size = new System.Drawing.Size(145, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Iniciar Sesion";
-            // 
-            // LnkRegistro
-            // 
-            this.LnkRegistro.AutoSize = true;
-            this.LnkRegistro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LnkRegistro.Location = new System.Drawing.Point(138, 280);
-            this.LnkRegistro.Name = "LnkRegistro";
-            this.LnkRegistro.Size = new System.Drawing.Size(71, 17);
-            this.LnkRegistro.TabIndex = 9;
-            this.LnkRegistro.TabStop = true;
-            this.LnkRegistro.Text = "Registrate!";
-            this.LnkRegistro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkRegistro_LinkClicked);
             // 
             // FrmLogin
             // 

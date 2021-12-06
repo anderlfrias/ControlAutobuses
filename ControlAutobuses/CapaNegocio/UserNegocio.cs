@@ -56,7 +56,7 @@ namespace CapaNegocio
             return message;
         }
 
-        private string ChangeRole(string id, string idRole)
+        public string ChangeRole(string id, string idRole)
         {
             if((string.IsNullOrEmpty(id)) || (string.IsNullOrEmpty(idRole)))
             {

@@ -23,11 +23,12 @@ namespace CapaPresentacion
             InitializeComponent();
             _idUsuario = idUsuario;
             _userNegocio = new UserNegocio();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         //Metodos
         private void OpenForm(Form form)
-        {                                                                                 //si el formulario/instancia no existe
+        {
             if (formulario != null)
             {
                 formulario.Close();
@@ -110,9 +111,7 @@ namespace CapaPresentacion
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            FrmLogin login = new FrmLogin();
-            this.Close();
-            login.Visible = true;
+            Application.Exit();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -141,7 +140,25 @@ namespace CapaPresentacion
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            OpenForm(new FrmUsuarios());
+            if (DisplayUserRole() == "admin")
+            {
+                OpenForm(new FrmUsuarios());
+            }
+            else
+            {
+                MessageBox.Show("No tienes los permisos necesarios\n" +
+                    "para abrir este formulario",
+                    "Advertencia",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FrmLogin login = new FrmLogin();
+            this.Close();
+            login.Visible = true;
         }
     }
 }

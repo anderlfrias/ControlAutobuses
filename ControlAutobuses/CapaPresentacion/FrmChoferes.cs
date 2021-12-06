@@ -46,6 +46,9 @@ namespace CapaPresentacion
             dgvChoferes.Columns[4].Width = 120;
             dgvChoferes.Columns[5].Width = 120;
 
+            dgvChoferes.AllowUserToResizeRows = false;
+            dgvChoferes.AllowUserToResizeColumns = false;
+
             dgvChoferes.ClearSelection();
         }
 
