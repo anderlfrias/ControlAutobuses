@@ -213,9 +213,9 @@
             this.btnAgregarViaje.ForeColor = System.Drawing.Color.White;
             this.btnAgregarViaje.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarViaje.Image")));
             this.btnAgregarViaje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarViaje.Location = new System.Drawing.Point(393, 73);
+            this.btnAgregarViaje.Location = new System.Drawing.Point(393, 75);
             this.btnAgregarViaje.Name = "btnAgregarViaje";
-            this.btnAgregarViaje.Size = new System.Drawing.Size(176, 33);
+            this.btnAgregarViaje.Size = new System.Drawing.Size(199, 33);
             this.btnAgregarViaje.TabIndex = 11;
             this.btnAgregarViaje.Text = "Agregar Viaje";
             this.btnAgregarViaje.UseVisualStyleBackColor = false;
@@ -230,7 +230,7 @@
             this.cboRutas.FormattingEnabled = true;
             this.cboRutas.Location = new System.Drawing.Point(14, 75);
             this.cboRutas.Name = "cboRutas";
-            this.cboRutas.Size = new System.Drawing.Size(249, 29);
+            this.cboRutas.Size = new System.Drawing.Size(285, 29);
             this.cboRutas.TabIndex = 10;
             this.cboRutas.SelectedIndexChanged += new System.EventHandler(this.cboRutas_SelectedIndexChanged);
             // 
@@ -241,9 +241,9 @@
             this.cboChoferes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboChoferes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cboChoferes.FormattingEnabled = true;
-            this.cboChoferes.Location = new System.Drawing.Point(320, 26);
+            this.cboChoferes.Location = new System.Drawing.Point(305, 26);
             this.cboChoferes.Name = "cboChoferes";
-            this.cboChoferes.Size = new System.Drawing.Size(249, 29);
+            this.cboChoferes.Size = new System.Drawing.Size(287, 29);
             this.cboChoferes.TabIndex = 9;
             this.cboChoferes.SelectedIndexChanged += new System.EventHandler(this.cboChoferes_SelectedIndexChanged);
             // 
@@ -256,7 +256,7 @@
             this.cboAutobuses.FormattingEnabled = true;
             this.cboAutobuses.Location = new System.Drawing.Point(14, 26);
             this.cboAutobuses.Name = "cboAutobuses";
-            this.cboAutobuses.Size = new System.Drawing.Size(249, 29);
+            this.cboAutobuses.Size = new System.Drawing.Size(285, 29);
             this.cboAutobuses.TabIndex = 8;
             this.cboAutobuses.SelectedIndexChanged += new System.EventHandler(this.cboAutobuses_SelectedIndexChanged);
             // 

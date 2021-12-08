@@ -34,12 +34,12 @@ namespace CapaPresentacion
         private void FirstActions()
         {
             MostrarUsuarios();
-            VisibilidadTabla();
         }
 
         private void MostrarUsuarios()
         {
             dtgUsuarios.DataSource = _userNegocio.DisplayUsers();
+            VisibilidadTabla();
         }
 
         private void VisibilidadTabla()
@@ -93,6 +93,14 @@ namespace CapaPresentacion
                 MessageBoxIcon.Information);
         }
         
+        private void Limpiar()
+        {
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtUsuario.Clear();
+            cboRoles.Items.Clear();
+        }
+        
         //Eventos
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -127,6 +135,8 @@ namespace CapaPresentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Guardar();
+            MostrarUsuarios();
+            Limpiar();
         }
     }
 

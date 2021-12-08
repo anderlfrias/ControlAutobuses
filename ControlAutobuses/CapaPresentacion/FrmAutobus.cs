@@ -45,7 +45,7 @@ namespace CapaPresentacion
             dgvAutobuses.Columns[7].Width = 82;
 
             dgvAutobuses.AllowUserToResizeRows = false;
-            dgvAutobuses.AllowUserToResizeColumns = true;
+            dgvAutobuses.AllowUserToResizeColumns = false;
 
             dgvAutobuses.ClearSelection();
         }
